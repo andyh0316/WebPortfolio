@@ -1,0 +1,29 @@
+﻿<div class="fixed-container">
+    <div id="navigation-menu" class="clearfix">
+        <div id="introduction" class="menu-option active">
+            <div class="option-icon"></div>
+            <div class="option-text">Home</div>
+        </div>
+        <div id="philosophy" class="menu-option">
+            <div class="option-icon"></div>
+            <div class="option-text">Philosophy</div>
+        </div>
+
+        <div id="product" class="menu-option">
+            <div class="option-icon"></div>
+            <div class="option-text">Product</div>
+        </div>
+
+        <div id="contact" class="menu-option">
+            <div class="option-icon"></div>
+            <div class="option-text">Contact</div>
+        </div>    
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#navigation-menu .menu-option').click(function () {
+        var pageId = $(this).attr('id');
+        scrollToPage(pageId, gPageScrollingSpeed);
+    })
+</script>

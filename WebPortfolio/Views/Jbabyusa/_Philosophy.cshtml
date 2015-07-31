@@ -1,0 +1,34 @@
+﻿<div id="philosophy" class="public-page">
+    <div class="text-container">
+        <div class="text-title">We commit to you that</div>
+        <div class="text-block">our products will always be proudly made in the USA </div>
+        <div class="text-block">we hand select the purest materials for our products</div>
+        <div class="text-block">your child’s safety and comfort is our number one priority</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var $philosophyPageContainer = $('.public-page#philosophy');
+    var gPhilosophyAnimated = false;
+
+    function animatePhilosophy() {
+        if (gPhilosophyAnimated) { return; } else { gPhilosophyAnimated = true; };
+
+        $philosophyPageContainer.find('.text-title').fadeIn(1000);
+        $philosophyPageContainer.find('.text-block:first');
+        textTransition($philosophyPageContainer.find('.text-block:first'));
+
+        //$philosophyPageContainer.find('.text-block:first').fadeIn(1000).fadeOut(1000);
+    }
+
+    function textTransition(textBlock) {
+        $(textBlock).css('letter-spacing', '-3px')
+                    .fadeIn({ duration: 700, queue: false })
+                    .animate({ letterSpacing: '-2px' }, { duration: 700 })
+                    .delay(3500).fadeOut(700,
+                        function () {
+                            var $nextElement = ($(textBlock).next().length == 0) ? $philosophyPageContainer.find('.text-block:first') : $(textBlock).next();
+                            textTransition($nextElement);
+                        });
+    }
+</script>

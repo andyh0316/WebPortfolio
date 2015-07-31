@@ -1,0 +1,606 @@
+﻿body
+{
+    font-size: 16px;
+    font-family: 'Open Sans', Lato-Light, Sans-Serif;
+    color: rgb(39, 98, 109);
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    min-width: 1024px;
+}
+
+    body#public-layout {
+        overflow: hidden;
+        background-color: rgb(208, 240, 243);
+    }
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    min-height: 28px;
+    box-sizing: border-box;
+    background-color: rgb(223, 251, 255);
+    padding-left: 5px;
+    padding-right: 5px;
+    border: none;
+
+    transition:         all 200ms linear;
+    -webkit-transition: all 200ms linear;
+    -moz-transition:    all 200ms linear;
+    -o-transition:      all 200ms linear;
+}
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="password"]:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        background-color: rgb(186, 246, 255);
+    }
+
+button {
+
+}
+
+    button:focus {
+        outline: none;
+    }
+
+.editor {
+    float: left;
+    width: 200px;
+    padding-bottom: 5px;
+}
+
+    .editor.full {
+        width: 100%;
+    }
+
+    .editor.half {
+        width: 50%;
+    }
+
+
+.editor .editor-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.editor .editor-input {
+    padding-right: 10px;
+}
+
+    .editor .editor-input input[type="text"],
+    .editor .editor-input input[type="number"],
+    .editor .editor-input input[type="password"],
+    .editor .editor-input select,
+    .editor .editor-input textarea {       
+        width: 100%;
+    }
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 100px;
+    resize: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #E77575 !important;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Clearfix hack
+-----------------------------------------------------------*/
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.fixed-container {
+    width: 100%;
+    position: fixed;
+    z-index: 500;
+}
+
+.hide {
+    display: none;
+}
+
+#public-loading {
+    margin-top: 20%;
+    text-align: center;
+}
+
+#public-container {
+    display: none;
+}
+
+/**** Navigation Menu ****/
+#navigation-menu {
+    position: relative;
+    letter-spacing: -0px;
+    font-family: Oswald, Verdana, Helvetica, Sans-Serif;
+    font-size: 14px;
+    width: 400px; /* We need a definite width to center this: the width should contain the menu options exactly */
+    margin: 0 auto;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+    #navigation-menu .menu-option {
+        position: relative;
+        float: left;
+        width: 100px;
+        background-color: rgba(30, 165, 190, 0.6);
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+        #navigation-menu .menu-option:hover {
+            background-color: rgba(30, 165, 190, 0.4);
+            cursor: pointer;
+
+            -webkit-transition: background-color 200ms ease-in;
+            -moz-transition: background-color 200ms ease-in;
+            -o-transition: background-color 200ms ease-in;
+            transition: background-color 200ms ease-in;
+        }
+
+        #navigation-menu .menu-option.active {
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        #navigation-menu .menu-option .option-icon {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+            margin-bottom: 2px;
+            background-position-y: 0px;
+            background-size: cover;
+        }
+
+        #navigation-menu .menu-option#introduction .option-icon {
+             background-image: url('/Content/Jbabyusa/PublicPages/NavigationMenu/introduction.png');
+        }
+
+        #navigation-menu .menu-option#philosophy .option-icon {
+             background-image: url('/Content/Jbabyusa/PublicPages/NavigationMenu/philosophy.png');
+        }
+
+        #navigation-menu .menu-option#product .option-icon {
+             background-image: url('/Content/Jbabyusa/PublicPages/NavigationMenu/product.png');
+        }
+
+        #navigation-menu .menu-option#contact .option-icon {
+             background-image: url('/Content/Jbabyusa/PublicPages/NavigationMenu/contact.png');
+        }
+
+        #navigation-menu .menu-option .option-text {
+            color: white;
+            text-align: center;
+        }
+
+        #navigation-menu .menu-option:hover .option-icon {
+
+        }
+
+        #navigation-menu .menu-option.active .option-icon {
+            background-position-y: 20px;
+        }
+
+        #navigation-menu .menu-option:hover .option-text {
+        }
+
+        #navigation-menu .menu-option.active .option-text {
+            color: #76C6D6;
+        }
+
+.public-page {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+/**** Introduction ****/
+.public-page#introduction {
+    background-image: url('/Content/Jbabyusa/Background/introduction.jpg');
+}
+
+    .public-page#introduction #jbabyusa-logo {
+        position: relative;
+        top: 20%;
+        left: 20%;
+    }
+
+        .public-page#introduction #jbabyusa-logo .letter {
+            position: absolute;
+            width: 200px;
+            opacity: 0;
+        }
+
+/**** Philosophy ****/
+.public-page#philosophy {
+    background-image: url('/Content/Jbabyusa/Background/philosophy.jpg');
+    background-position: right center;
+}
+
+    .public-page#philosophy .text-container {
+        position: relative;
+        top: 25%;
+        left: 15%;
+        text-shadow: 2px 2px rgb(172, 212, 219);
+    }
+
+        .public-page#philosophy .text-container .text-title {
+            font-size: 34px;
+            letter-spacing: -2px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .public-page#philosophy .text-container .text-block {
+            font-size: 27px;
+            letter-spacing: -2px;
+            display: none;
+        }
+
+
+/**** Product ****/
+.public-page#product {
+
+}
+    .public-page#product .arrow {
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px rgb(223, 223, 223);
+        top: 40%;
+        opacity: 1;
+
+        transition:         all .15s ease-in-out;
+        -webkit-transition: all .15s ease-in-out;
+        -moz-transition:    all .15s ease-in-out;
+        -o-transition:      all .15s ease-in-out;
+    }
+
+        .public-page#product .arrow.fade {
+            opacity: 0 !important;
+        }
+
+        .public-page#product .arrow.enabled {
+        }
+
+        .public-page#product .arrow.disabled {
+            opacity: 0.5;
+        }
+
+        .public-page#product .arrow.enabled:hover {
+            transform: scale(1.15);
+            -webkit-transform: scale(1.15);
+            -moz-transform: scale(1.15);
+            -o-transform: scale(1.15);
+
+            cursor: pointer;
+        }
+
+        .public-page#product .arrow#left-arrow {
+            left: 5%;
+        }
+
+        .public-page#product .arrow#right-arrow {
+            right: 5%;
+        }
+
+    .public-page#product .product-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        /* if changing the time here also change the transition on buttom */
+        transition:         opacity 700ms ease-in-out, left 700ms ease-in-out; 
+        -webkit-transition: opacity 700ms ease-in-out, left 700ms ease-in-out;
+        -moz-transition:    opacity 700ms ease-in-out, left 700ms ease-in-out;
+        -o-transition:      opacity 700ms ease-in-out, left 700ms ease-in-out;
+    }
+
+        .public-page#product .product-container .product-image-container {
+            position: relative;
+            top: 18%;
+            height: 75%; /* width same as height: will be determined by javascript */
+            background-size: cover;
+            margin: 0 auto;
+        }
+
+            .public-page#product .product-container#short-romper .product-image-container {
+                background-image: url('/Content/Jbabyusa/PublicPages/Product/romper-short.png');
+            }
+
+            .public-page#product .product-container#long-romper .product-image-container {
+                background-image: url('/Content/Jbabyusa/PublicPages/Product/romper-long.png');
+            }
+
+        .public-page#product .product-container.slided-center {
+            opacity: 1;
+            left: 0%;   
+        }
+
+        .public-page#product .product-container.slided-left {
+            opacity: 0;
+            left: -100%; 
+        }
+
+        .public-page#product .product-container.slided-right {
+            opacity: 0;
+            left: 100%;
+        }
+
+    .public-page#product .product-bubble {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        background-size: cover; 
+        opacity: 0;
+    }
+        
+        .public-page#product .product-bubble.jump-up {
+            opacity: 1;
+            transform: translate(0px, -25px);
+
+            transition: transform 200ms linear;
+        }
+
+        .public-page#product .product-bubble.jump-down {
+            opacity: 1;
+            transform: translate(0px, 0px);
+
+            transition: transform 200ms linear;
+        }
+
+        .public-page#product .product-bubble .bubble-image {
+            position: absolute;
+            display: table;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-size: cover;
+            box-shadow: 0px 0px 10px white;
+            opacity: 0;
+        }
+
+            .public-page#product .product-bubble .bubble-image .bubble-image-text {
+                position: relative;
+                display: table-cell;
+                font-weight: bold;
+                box-sizing: border-box;
+                font-size: 5px;
+                text-align: justify;
+                vertical-align: middle;
+                z-index: 800;
+            }
+
+        .public-page#product .product-bubble .text {
+            position: absolute;
+            font-family: Oswald, Verdana, Helvetica, Sans-Serif;
+            font-size: 15px;
+            
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            display: table;
+        }
+
+            .public-page#product .product-bubble .text .inner {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+        .public-page#product .product-bubble#fabric {
+            background-image: url('/Content/Jbabyusa/PublicPages/Product/bubble-fabric.png');
+        }
+
+            .public-page#product .product-bubble#fabric .bubble-image {
+                background-image: url('/Content/Jbabyusa/PublicPages/Product/fabric.jpg');
+            }
+
+        .public-page#product .product-bubble#button {
+            background-image: url('/Content/Jbabyusa/PublicPages/Product/bubble-button.png');
+        }
+
+            .public-page#product .product-bubble#button .bubble-image {
+                background-image: url('/Content/Jbabyusa/PublicPages/Product/button.jpg');
+            }
+
+        .public-page#product .product-bubble#tag {
+            background-image: url('/Content/Jbabyusa/PublicPages/Product/bubble-tag.png');
+        }
+
+            .public-page#product .product-bubble#tag .bubble-image {
+                background-image: url('/Content/Jbabyusa/PublicPages/Product/tagusa.jpg');
+            }
+
+        .public-page#product .product-bubble#neck {
+            background-image: url('/Content/Jbabyusa/PublicPages/Product/bubble-neck.png');
+        }
+
+            .public-page#product .product-bubble#neck .bubble-image {
+                background-image: url('/Content/Jbabyusa/PublicPages/Product/neck.jpg');
+            }
+
+        .public-page#product .product-bubble.grow {
+            background-image: none !important;
+            background-color: #6ebec8;
+            border-radius: 50%;
+            transform: scale(3.5);
+            transition: transform 200ms ease-out;
+        }
+
+        .public-page#product .product-bubble.grow .text {
+            display: none;
+        }
+
+        .public-page#product .product-bubble#neck.grow {
+            transform: scale(3.5) translate(0px, 20px) !important;
+        } 
+
+        .public-page#product .product-bubble#button.grow {
+            transform: scale(3.5) translate(0px, -10px) !important;
+        } 
+
+        .public-page#product .product-bubble.display .bubble-image {
+            opacity: 1;
+            background-color: #6ebec8;
+            transition: opacity 200ms ease-out;
+        }
+
+        .public-page#product .product-bubble:hover {
+            cursor: pointer;
+        }
+
+/**** Contact ****/
+.public-page#contact {
+
+}
+
+    .public-page#contact .contact-container {
+        position: relative;
+        top: 15%;
+        margin: 0 auto;
+        width: 900px;
+        background-color: white;
+        box-shadow: 0px 0px 20px rgb(192, 213, 223);
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+        box-sizing: border-box;
+    }
+
+        .public-page#contact .contact-container .title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: -2px;
+            padding-bottom: 20px;
+        }
+
+        .public-page#contact .contact-container .content-container .form {
+            width: 70%;
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+        .public-page#contact .contact-container .content-container .info {
+            width: 30%;
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+            .public-page#contact .contact-container .content-container .info .contact-info {
+                padding-bottom: 20px;
+            }
+
+                .public-page#contact .contact-container .content-container .info .contact-info .label {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                .public-page#contact .contact-container .content-container .info .contact-info .content {
+
+                }
+
+        .public-page#contact .contact-container .button-container {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 15px;
+        }
+
+            .public-page#contact .contact-container .button-container button {
+                background-color: rgb(110,190,200);
+                width: 135px;
+                height: 50px;
+                border: none;
+                color: white;
+                font-family: inherit;
+                font-weight: bold;
+                font-size: 18px;
+                border-radius: 8px;
+
+                transition:         all 200ms linear;
+                -webkit-transition: all 200ms linear;
+                -moz-transition:    all 200ms linear;
+                -o-transition:      all 200ms linear;
+            }
+
+            .public-page#contact .contact-container .button-container button:hover {
+                background-color: rgb(26, 160, 177);
+                cursor: pointer;
+            }

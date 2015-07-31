@@ -1,0 +1,41 @@
+﻿<div id="introduction" class="public-page">
+    <div id="jbabyusa-logo" class="logo">
+        <img class="letter" src="/Content/Jbabyusa/PublicPages/Introduction/LogoLetters/j.png"/>
+        <img class="letter" src="/Content/Jbabyusa/PublicPages/Introduction/LogoLetters/b_1.png"/>
+        <img class="letter" src="/Content/Jbabyusa/PublicPages/Introduction/LogoLetters/a.png"/>
+        <img class="letter" src="/Content/Jbabyusa/PublicPages/Introduction/LogoLetters/b_2.png"/>
+        <img class="letter" src="/Content/Jbabyusa/PublicPages/Introduction/LogoLetters/y.png"/>
+        <img class="letter" style="left: -50px" src="/Content/Jbabyusa/PublicPages/Introduction/LogoLetters/usa.png"/>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var gIntroductionAnimated = false;
+    var gIsLogoJumping = false;
+
+    var $introPageContainer = $('.public-page#introduction');
+    function animateIntroduction() {
+        if (gIntroductionAnimated) { return; } else { gIntroductionAnimated = true; }
+
+        logoJump();
+    }
+
+    function logoJump() {
+        if (gIsLogoJumping) return;
+
+        gIsLogoJumping = true;
+        var $logoLetters = $introPageContainer.find('#jbabyusa-logo .letter');
+        $logoLetters.eq(0).delay(0).animate({ opacity: 1, top: "-20px" }, 200).animate({ top: "0px" });
+        $logoLetters.eq(1).delay(100).animate({ opacity: 1, top: "-20px" }, 200).animate({ top: "0px" });
+        $logoLetters.eq(2).delay(200).animate({ opacity: 1, top: "-20px" }, 200).animate({ top: "0px" });
+        $logoLetters.eq(3).delay(300).animate({ opacity: 1, top: "-20px" }, 200).animate({ top: "0px" });
+        $logoLetters.eq(4).delay(400).animate({ opacity: 1, top: "-20px" }, 200).animate({ top: "0px" });
+        $logoLetters.eq(5).delay(500).animate({ opacity: 1, left: "0px" }, 500);
+
+        setTimeout(function () { gIsLogoJumping = false; }, 600);
+    }
+
+    $introPageContainer.find('#jbabyusa-logo').mouseover(function () {
+        logoJump();
+    });
+</script>

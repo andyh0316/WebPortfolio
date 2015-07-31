@@ -1,0 +1,204 @@
+﻿body {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    color: white ;
+    font-family: "Open Sans Condensed", sans-serif;
+    letter-spacing: 0.3px;
+    background-color: rgb(32, 32, 32);
+}
+
+#intro-page-container {
+    position: relative;
+    min-width: 1280px;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+}
+
+    #intro-page-container #main-content {
+        position: relative;
+        top: 250px;
+        text-align: center;
+    }
+
+    #intro-page-container .name {
+        font-size: 100px;
+    }
+
+    #intro-page-container .occupation {
+        font-size: 38px;
+    }
+
+    #intro-page-container .description {
+        margin-top: 100px;
+        font-size: 20px;
+    } 
+
+    #intro-page-container .button {
+        background-color: rgb(32, 32, 32);
+        border: 1px solid white;
+        height: 50px;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: inherit;
+        color: white;
+
+        margin-top: 30px;
+    }
+
+        #intro-page-container .button:hover {
+            background-color: rgb(210, 210, 210);
+            color: rgb(32, 32, 32);
+            cursor: pointer;
+            transition: 0.4s all ease-in-out;
+        }
+
+#main-page-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    min-width: 1280px;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+    .vertical-panel {
+        position: relative;
+        float: left;
+        width: 20%;
+        height: 100%;
+        /*background-color: rgb(31, 29, 29);*/
+        background-color: rgb(32, 32, 32);
+        box-sizing: border-box;
+
+        left: 100%;
+    }
+
+        .vertical-panel:not(:last-child) {
+            border-right: 1px solid rgb(43, 45, 45);
+        }
+
+        .vertical-panel:not(:first-child) {
+            border-left: 2px solid rgb(21, 22, 23);
+        }
+
+        .vertical-panel:hover {
+            /*background-color: rgb(247, 247, 247);*/
+            /*color: rgb(219, 219, 219);*/
+            transition: all 0.4s ease-in-out;
+            /*color: black;*/
+            cursor: pointer;
+
+            border-right: none;
+        }
+
+            .vertical-panel:hover .background {
+                opacity: 0.20 !important;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .vertical-panel:hover .vertical-panel-title {
+                top: 230px;
+                transition: all 0.25s ease-in-out;
+            }
+
+            .vertical-panel:hover .vertical-panel-separator {
+                display: block;
+            }
+
+            .vertical-panel:hover .vertical-panel-content {
+                opacity: 1;
+                transition: all 0.4s ease-in-out;
+            }
+
+        .vertical-panel .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-size: 100% auto;
+            background-color: rgb(211, 211, 211);
+            background-repeat: no-repeat;
+            top: 0px;
+        }
+
+        .vertical-panel .vertical-panel-title {
+            position: relative;
+            font-size: 38px;
+            letter-spacing: -1px;
+            text-align: center;
+            top: 250px;
+        }
+
+        .vertical-panel .vertical-panel-content {
+            opacity: 0;
+            position: relative;
+            top: 280px;
+            font-size: 18px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+        }
+
+        /*.vertical-panel .vertical-panel-separator {
+            display: none;
+            position: relative;
+            top: 250px;
+            width: 50%;
+            margin: 0 auto;
+            border-top: 1px solid rgb(129, 116, 116);
+        }*/
+
+#resume-panel {
+    
+}
+
+    #resume-panel .background {
+        background-image: url('/Content/Main/resume.png');
+    }
+
+#photography-panel {
+    
+}
+
+    #photography-panel .background {
+        background-image: url('/Content/Main/sea.png');
+    }
+
+#videography-panel {
+    
+}
+
+    #videography-panel .background {
+        background-image: url('/Content/Main/video.png');
+    }
+
+#redesign-panel {
+    
+}
+
+    #redesign-panel .background {
+        background-image: url('/Content/Main/redesign.png');
+    }
+
+#website-panel {
+    
+}
+
+    #website-panel .background {
+        background-image: url('/Content/Main/project.png');
+    }
+
+.unclickable-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+    

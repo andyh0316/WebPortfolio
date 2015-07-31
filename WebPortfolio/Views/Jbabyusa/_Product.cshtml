@@ -1,0 +1,106 @@
+﻿<div id="product" class="public-page">
+    <div id="short-romper" class="product-container slided-center">
+        <div class="product-image-container">
+            @*<img class="romper-image" src="/Content/Jbabyusa/PublicPages/Product/romper-short.png" />*@
+
+            @*<img class="product-bubble" src="/Content/Jbabyusa/PublicPages/Product/bubble-fabric.png" style="position: absolute; right: 72.5%; top: 35%; "/>*@
+            <div id="fabric" class="product-bubble" style="right: 72.5%; top: 35%;">
+                <div class="text"><div class="inner">fabric</div></div>
+                <div class="bubble-image">
+                    <div class="bubble-image-text" style="left: -110%;">Made with 100% cotton fabric that is knit locally in Los Angeles, giving your child maximum safety and comfort.</div>
+                </div>
+            </div>
+
+            <div id="button" class="product-bubble" style="right: 68%; top: 82%;">
+                <div class="text"><div class="inner">button</div></div>
+                <div class="bubble-image">
+                    <div class="bubble-image-text" style="left: -110%;">Durable and conveniently placed snap buttons allow for easy diaper changes.</div>
+                </div>
+            </div>
+
+            <div id="neck" class="product-bubble" style="left: 51%; bottom: 97%;">
+                <div class="text"><div class="inner">neck</div></div>
+                <div class="bubble-image">
+                    <div class="bubble-image-text" style="right: -110%">Special neckline design allows for easy dressing so there's less fuss-time and more playtime.</div>
+                </div>
+            </div>
+
+            <div id="tag" class="product-bubble" style="left: 75%; top: 67%;">
+                <div class="text"><div class="inner">tag</div></div>
+                <div class="bubble-image">
+                    <div class="bubble-image-text" style="right: -110%">Placed on the side so that only pure cotton comes into contact with your child, reducing the risk of skin irritation.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="long-romper" class="product-container slided-right">
+        <div class="product-image-container">
+        </div>
+    </div>
+
+    <img id="left-arrow" class="arrow disabled" src="/Content/Jbabyusa/PublicPages/Product/arrow-left.png"/>
+    <img id="right-arrow" class="arrow enabled" src="/Content/Jbabyusa/PublicPages/Product/arrow-right.png"/>
+</div>
+
+<script type="text/javascript">
+    var $productPageContainer = $('.public-page#product');
+    var gProductAnimated = false;
+    var gIsAnimatingBubble = false;
+    var gBubbleJumpDelay = 100;
+
+    function animateProduct() {
+        if (gProductAnimated) { return; } else { gProductAnimated = true; }
+
+        $('.product-bubble').each(function () {
+            bubbleJump($(this));
+        });
+
+        // Wait until bumble jump is finished to bind the function, the wait time is dependent on how long it takes for bubble to finish jumping
+        setTimeout(function () {
+            $('.product-bubble').mouseenter(function () {
+                $productPageContainer.find('.arrow').addClass('fade');
+                $(this).addClass('grow').delay(250).queue(function () { $(this).addClass('display'); $(this).dequeue(); });
+            }).mouseleave(function () {
+                $productPageContainer.find('.arrow').removeClass('fade');
+                $(this).dequeue().removeClass('grow').removeClass('display');
+            });
+        }, 600);
+    }
+
+    $productPageContainer.find('.arrow').click(function () {
+        if ($(this).attr('id') == 'right-arrow') {
+            if ($('.product-container').hasClass('slided-right')) {
+                $('.product-container.slided-center').removeClass('slided-center').addClass('slided-left');
+                $('.product-container.slided-right:first').removeClass('slided-right').addClass('slided-center');
+            }
+        }
+
+        if ($(this).attr('id') == 'left-arrow') {
+            if ($('.product-container').hasClass('slided-left')) {
+                $('.product-container.slided-center').removeClass('slided-center').addClass('slided-right');
+                $('.product-container.slided-left:last').removeClass('slided-left').addClass('slided-center');
+            }
+        }
+
+        if ($('.product-container').hasClass('slided-right')) {
+            $productPageContainer.find('.arrow#right-arrow').removeClass('disabled').addClass('enabled');
+        } else {
+            $productPageContainer.find('.arrow#right-arrow').removeClass('enabled').addClass('disabled');
+        }
+
+        if ($('.product-container').hasClass('slided-left')) {
+            $productPageContainer.find('.arrow#left-arrow').removeClass('disabled').addClass('enabled');
+        } else {
+            $productPageContainer.find('.arrow#left-arrow').removeClass('enabled').addClass('disabled');
+        }
+    });
+
+    function bubbleJump(bubble) {
+        gBubbleJumpDelay = gBubbleJumpDelay + 100;
+
+        $(bubble).delay(gBubbleJumpDelay).queue(function () { $(this).addClass('jump-up'); $(this).dequeue(); })
+                 .delay(200).queue(function () { $(this).addClass('jump-down'); $(this).dequeue();  })
+    }
+
+</script>

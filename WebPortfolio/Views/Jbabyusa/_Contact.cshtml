@@ -1,0 +1,71 @@
+﻿@model JBabyUSA_Final.Models.ContactUs
+
+<div id="contact" class="public-page">
+    <div class="contact-container">
+        @using (Html.BeginForm("SaveContactMessage", "Public"))
+        {
+            <div class="title">Contact Us</div>
+            <div class="content-container clearfix">
+                <div class="form clearfix">
+                    <div class="editor half">
+                        <div class="editor-label">@Html.LabelFor(m => m.FirstName)</div>
+                        <div class="editor-input">@Html.TextBoxFor(m => m.FirstName, new { @placeHolder = "" })</div>
+                    </div>
+                
+                    <div class="editor half">
+                        <div class="editor-label">@Html.LabelFor(m => m.LastName)</div>
+                        <div class="editor-input">@Html.TextBoxFor(m => m.LastName, new { @placeHolder = "" })</div>
+                    </div>
+
+                    <div class="editor full">
+                        <div class="editor-label">@Html.LabelFor(m => m.Email)</div>
+                        <div class="editor-input">@Html.TextBoxFor(m => m.Email, new { @placeHolder = "" })</div>
+                    </div>
+
+                    <div class="editor full">
+                        <div class="editor-label">@Html.LabelFor(m => m.Subject)</div>
+                        <div class="editor-input">@Html.TextBoxFor(m => m.Subject, new { @placeHolder = "" })</div>
+                    </div>
+
+                    <div class="editor full">
+                        <div class="editor-label">@Html.LabelFor(m => m.Message)</div>
+                        <div class="editor-input">@Html.TextAreaFor(m => m.Message, new { @placeHolder = "" })</div>
+                    </div>
+                </div>
+
+                <div class="info clearfix">
+                    <div class="contact-info">
+                        <div class="label">Phone</div>
+                        <div class="content">321-123-1234</div>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="label">Email</div>
+                        <div class="content">info@jbabyusa.com</div>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="label">Address</div>
+                        <div class="content">
+                            JBaby USA<br />
+                            1234 AndyHong Street <br />
+                            Los Angeles, CA 90000
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="button">Send</button>
+            </div>   
+        }   
+    </div>
+</div>
+    
+    
+
+
+<script type="text/javascript">
+    function animateContact() {
+        
+    }
+</script>

@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+@Styles.Render("~/Content/main")
+
+<div id="intro-page-container">
+    <div id="main-content">
+        <div class="name">Andy Hong</div>
+        <div class="occupation">Full Stack Software Engineer</div>
+        <button id="go-portfolio-button" class="button">Go to Web Portfolio >></button>
+        <div class="description">All sources coded from scratch</div>
+    </div>
+</div>
+
+<div id="main-page-container">
+    <div id="resume-panel" class="vertical-panel">
+        <div class="background"></div>
+        <div class="vertical-panel-title">Resume</div>
+        <div class="vertical-panel-content">
+            My resume which I developed in HTML and CSS
+        </div>
+    </div>
+    <div id="website-panel" class="vertical-panel">
+        <div class="background"></div>
+        <div class="vertical-panel-title">Project</div>
+        <div class="vertical-panel-content">
+            A sample web project I designed and developed for a baby onesies company.
+            All Javascripts are written without template from scratch.
+        </div>
+    </div>
+    <div id="redesign-panel" class="vertical-panel">
+        <div class="background"></div>
+        <div class="vertical-panel-title">Design</div>
+        <div class="vertical-panel-content">
+            Pictures containing some design work I've done for work.
+        </div>
+    </div>
+    <div id="videography-panel" class="vertical-panel">
+        <div class="background"></div>
+        <div class="vertical-panel-title">Videography</div>
+        <div class="vertical-panel-content">
+            Some of the videos I have produced for college student organization
+            and commercial start up company. Filmed, directed and edited by me.
+        </div>
+    </div>
+    <div id="photography-panel" class="vertical-panel">
+        <div class="background"></div>
+        <div class="vertical-panel-title">Photography</div>
+        <div class="vertical-panel-content">
+            Some photos I took as a hobbyist. Not particularly good at it but whatever. 
+        </div>
+    </div>
+
+    <div class="unclickable-overlay"></div>
+</div>
+
+<script src="/Scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#go-portfolio-button').click(function () {
+            var animationSpeed = 500;
+            $('#intro-page-container').animate({ 'left': '-100%' }, animationSpeed, function () { $(this).hide() });
+
+            var $verticalPanels = $('#main-page-container .vertical-panel');
+            $verticalPanels.each(function (index) {
+                animationSpeed = animationSpeed + 100;
+                $(this).animate({ "left": 0 }, animationSpeed, function () {
+                    if (index == $verticalPanels.length - 1) { // end of last animation
+                        $('#main-page-container .unclickable-overlay').hide();
+                        //$verticalPanels.find('.background').animate({"opacity": 0.15 }, 300);
+                    }
+                });
+            });
+        });
+
+        $('#resume-panel').click(function () {
+            window.open('/Main/Resume', '_blank');
+        });
+
+        $('#website-panel').click(function () {
+            window.open('/Main/JBabyUsa', '_blank');
+        });
+
+        $('#redesign-panel').click(function () {
+            window.open('/Main/Redesign', '_blank');
+        });
+
+        $('#videography-panel').click(function () {
+            window.open('/Main/Videography', '_blank');
+        });
+
+        $('#photography-panel').click(function () {
+            window.open('/Main/Photography', '_blank');
+        });
+    });
+</script>
