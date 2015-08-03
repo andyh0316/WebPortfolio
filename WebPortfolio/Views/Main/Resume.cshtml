@@ -6,11 +6,17 @@
     <div id="header">
         <div class="left-block">
             <div id="name">Haitian Hong</div>
-            <div id="position">Full Stack Web Developer</div>
+            <div id="position">
+                Full Stack Web Developer 
+                @if (ViewBag.IsHtml != null && ViewBag.IsHtml == true)
+                {
+                    <a href="/Main/ResumePdf/" style="font-size: 16px;">View PDF Version</a>
+                }
+            </div>
         </div>
         <div class="right-block">
-            <div id="email">andyhong0316@yahoo.com</div>
-            <div id="email">www.andyhongportfolio.com</div>
+            <div><span>Email: </span><span>andyhong0316@yahoo.com</span></div>
+            <div><span>Web Portfolio: </span><span id="email"><a href="http://www.haitianhong.com">www.HaitianHong.com</a></span></div>
         </div>
     </div>
     @*<img src="@Url.Content("/Content/Resume/work.png")"/>*@
@@ -170,6 +176,10 @@
             box-sizing: border-box;
             background-color: rgb(65, 178, 205);
             color: white;
+        }
+
+        #resume-container a {
+            color: inherit;
         }
 
             #resume-container #header .left-block {
