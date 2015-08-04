@@ -10,8 +10,15 @@
     <div id="main-content">
         <div class="name">Andy Hong</div>
         <div class="occupation">Full Stack Software Engineer</div>
-        <button id="go-portfolio-button" class="button">Go to Web Portfolio >></button>
-        <div class="description">All sources coded from scratch</div>
+        <button id="go-portfolio-button" class="button loading">Go to Web Portfolio >></button>
+        <div class="description">
+            <div>All sources coded from scratch.</div>
+            <div>
+                This web portfolio is a demonstration of my front-end ability, 
+                and is not meant to epitomize myself as a front-end developer. 
+                My role is full stack developer with the concentration in back-end development.
+            </div>
+        </div>
     </div>
 </div>
 
@@ -28,7 +35,7 @@
         <div class="vertical-panel-title">Project</div>
         <div class="vertical-panel-content">
             A sample web project I designed and developed for a baby onesies company.
-            All Javascripts are written without template from scratch.
+            All Javascripts and CSS are written without template from scratch.
         </div>
     </div>
     <div id="redesign-panel" class="vertical-panel">
@@ -59,18 +66,21 @@
 
 <script src="/Scripts/jquery-1.8.2.min.js"></script>
 <script type="text/javascript">
+    window.onload = function () {
+        $('#go-portfolio-button').removeClass('loading'); // take away loading when pictures done loading
+    };
+
     $(document).ready(function () {
         $('#go-portfolio-button').click(function () {
-            var animationSpeed = 500;
+            var animationSpeed = 300;
             $('#intro-page-container').animate({ 'left': '-100%' }, animationSpeed, function () { $(this).hide() });
 
             var $verticalPanels = $('#main-page-container .vertical-panel');
             $verticalPanels.each(function (index) {
-                animationSpeed = animationSpeed + 100;
+                animationSpeed = animationSpeed + 200;
                 $(this).animate({ "left": 0 }, animationSpeed, function () {
                     if (index == $verticalPanels.length - 1) { // end of last animation
-                        $('#main-page-container .unclickable-overlay').hide();
-                        //$verticalPanels.find('.background').animate({"opacity": 0.15 }, 300);
+                        $('#main-page-container .unclickable-overlay').hide(); // take away the overlay that prevents user from hovering and clicking
                     }
                 });
             });

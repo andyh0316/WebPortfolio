@@ -18,12 +18,18 @@ namespace WebPortfolio.Controllers
 
         public ActionResult Resume()
         {
+            ViewBag.IsHtml = true;
             return View();
+        }
+
+        public ActionResult ResumePdfAction()
+        {
+            return View("Resume");
         }
 
         public ActionResult ResumePdf()
         {
-            return new Rotativa.ActionAsPdf("Resume")
+            return new Rotativa.ActionAsPdf("ResumePdfAction")
                     {
                         PageOrientation = Rotativa.Options.Orientation.Portrait,
                         PageSize = Rotativa.Options.Size.A4,
@@ -34,11 +40,6 @@ namespace WebPortfolio.Controllers
         public ActionResult JBabyUsa()
         {
             return View("/Views/Jbabyusa/Index.cshtml");
-        }
-
-        public ActionResult Redesign()
-        {
-            return View();
         }
     }
 }

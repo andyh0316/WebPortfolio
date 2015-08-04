@@ -171,6 +171,7 @@
     <Content Include="Content\Jbabyusa\PublicPages\Product\romper-long.png" />
     <Content Include="Content\Jbabyusa\PublicPages\Product\romper-short.png" />
     <Content Include="Content\Main.css" />
+    <Content Include="Content\Main\button-loading.gif" />
     <Content Include="Content\Main\IMG_7142.JPG" />
     <Content Include="Content\Main\project.png" />
     <Content Include="Content\Main\redesign.png" />
