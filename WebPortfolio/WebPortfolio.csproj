@@ -140,6 +140,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Redesign\CptSearch1.JPG" />
+    <Content Include="Content\Redesign\CptSearch2.JPG" />
+    <Content Include="Content\Redesign\CptSearch3.JPG" />
+    <Content Include="Content\Redesign\Facilities1.png" />
+    <Content Include="Content\Redesign\Facilities2.png" />
+    <Content Include="Content\Redesign\Login1.JPG" />
+    <Content Include="Content\Redesign\Login2.PNG" />
+    <Content Include="Content\Redesign\PatientAccountLedger1.png" />
+    <Content Include="Content\Redesign\PatientAccountLedger2.png" />
+    <Content Include="Content\Redesign\PatientSearch1.png" />
+    <Content Include="Content\Redesign\PatientSearch2.png" />
+    <Content Include="Content\Redesign\Photo.PNG" />
+    <Content Include="Content\Style.css" />
     <Content Include="Content\Jbabyusa.css" />
     <Content Include="Content\Jbabyusa\Background\introduction.jpg" />
     <Content Include="Content\Jbabyusa\Background\philosophy.jpg" />
@@ -263,6 +276,7 @@
     <Content Include="Views\Jbabyusa\_NavigationMenu.cshtml" />
     <Content Include="Views\Jbabyusa\_Philosophy.cshtml" />
     <Content Include="Views\Jbabyusa\_Product.cshtml" />
+    <Content Include="Views\Main\Redesign.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
