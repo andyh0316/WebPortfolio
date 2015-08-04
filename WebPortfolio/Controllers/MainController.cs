@@ -41,5 +41,10 @@ namespace WebPortfolio.Controllers
         {
             return View("/Views/Jbabyusa/Index.cshtml");
         }
+
+        public ActionResult Redesign()
+        {
+            return View();
+        }
     }
 }
