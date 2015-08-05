@@ -140,6 +140,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Main\arrow-left.png" />
     <Content Include="Content\Redesign\CptSearch1.JPG" />
     <Content Include="Content\Redesign\CptSearch2.JPG" />
     <Content Include="Content\Redesign\CptSearch3.JPG" />
@@ -147,6 +148,7 @@
     <Content Include="Content\Redesign\Facilities2.png" />
     <Content Include="Content\Redesign\Login1.JPG" />
     <Content Include="Content\Redesign\Login2.PNG" />
+    <Content Include="Content\Redesign\Modern-Web-Slider.jpg" />
     <Content Include="Content\Redesign\PatientAccountLedger1.png" />
     <Content Include="Content\Redesign\PatientAccountLedger2.png" />
     <Content Include="Content\Redesign\PatientSearch1.png" />

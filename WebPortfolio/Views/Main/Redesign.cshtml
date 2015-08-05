@@ -6,12 +6,19 @@
 @Styles.Render("~/Content/css")
 
 <div id="media-container">
-    <div class="media-content">
-        <div class="frame">
-            <img src="~/Content/Redesign/Facilities2.png"/>
-        </div>
-    </div>
+    <div class="frame">
+        <div class="image-wrapper"><img src="~/Content/Redesign/Facilities1.png"/></div>
+        <div class="image-wrapper"><img src="~/Content/Redesign/Facilities2.png"/></div>
+        <div class="image-wrapper"><img src="~/Content/Redesign/PatientAccountLedger1.png"/></div>
+        <div class="image-wrapper"><img src="~/Content/Redesign/PatientAccountLedger2.png"/></div>
 
-    <span>left</span>
-    <span>right</span>
+        <div id="left-button" class="frame-button"></div>
+        <div id="right-button" class="frame-button"></div>
+    </div>
 </div>
+
+@*<script type="text/javascript">
+    $('#left-button').click(function () {
+
+    });
+</script>*@
