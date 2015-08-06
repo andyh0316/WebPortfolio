@@ -43,6 +43,9 @@ namespace WebPortfolio
                         "~/Content/themes/base/jquery.ui.theme.css"));
 
             bundles.Add(new StyleBundle("~/Content/main").Include("~/Content/Main.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                        "~/Scripts/angular.js"));
         }
     }
 }
