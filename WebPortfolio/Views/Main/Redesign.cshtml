@@ -1,17 +1,37 @@
-﻿@{
+﻿@model WebPortfolio.Models.Media
+
+@{
     Layout = null;
-    ViewBag.Title = "Redesign";
 }
 
 @Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/angular")
 
-<div id="media-container">
+<div id="media-container" ng-app="MediaApp" ng-controller="MediaController">
     <div class="media-content">
-        <div class="frame">
-            <img src="~/Content/Redesign/Facilities2.png"/>
+        <div class="frame">  
+            <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
+                <img ng-src="{{item.ImageSrc}}"/>
+            </div>
+            @*<div class="wrapper"><img src="~/Content/Redesign/Facilities1.png"/></div>
+            <div class="wrapper"><img src="~/Content/Redesign/Facilities2.png"/></div>*@
         </div>
     </div>
 
-    <span>left</span>
-    <span>right</span>
+    <span id="left-button">left</span>
+    <span id="right-button" ng-click="func()">right</span>
 </div>
+
+<script src="/Scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+    var model = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)); // Image and video srcs are passed in as model from the backend
+
+    angular.module('MediaApp', [])
+    .controller('MediaController', ['$scope', '$sce', '$http', '$timeout', function ($scope, $sce, $http, $timeout) {
+        $scope.SelectedIndex = 0;
+        $scope.Model = model;
+        $scope.func = function () {
+            $scope.SelectedIndex++;
+        };
+    }]);
+</script>

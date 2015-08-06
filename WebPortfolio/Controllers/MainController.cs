@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebPortfolio.Models;
 
 namespace WebPortfolio.Controllers
 {
@@ -44,7 +45,74 @@ namespace WebPortfolio.Controllers
 
         public ActionResult Redesign()
         {
-            return View();
+            Media media = new Media
+            {
+                MediaContents = new List<MediaContent>()
+            };
+
+            media.MediaContents.Add(
+                new MediaContent {
+                    ImageSrc = "/Content/Redesign/Facilities1.png"
+                }    
+            );
+
+            media.MediaContents.Add(
+                new MediaContent
+                {
+                    ImageSrc = "/Content/Redesign/Facilities2.png"
+                }
+            );
+
+            media.MediaContents.Add(
+                new MediaContent
+                {
+                    ImageSrc = "/Content/Redesign/Login1.png"
+                }
+            );
+
+            media.MediaContents.Add(
+                new MediaContent
+                {
+                    ImageSrc = "/Content/Redesign/Login2.png"
+                }
+            );
+
+            media.MediaContents.Add(
+                new MediaContent
+                {
+                    ImageSrc = "/Content/Redesign/PatientAccountLedger1.png"
+                }
+            );
+
+            media.MediaContents.Add(
+                new MediaContent
+                {
+                    ImageSrc = "/Content/Redesign/PatientAccountLedger2.png"
+                }
+            );
+
+            media.MediaContents.Add(
+                new MediaContent
+                {
+                    ImageSrc = "/Content/Redesign/PatientAccountLedger2.png"
+                }
+            );
+
+            media.MediaContents.Add(
+                new MediaContent
+                {
+                    ImageSrc = "/Content/Redesign/PatientSearch1.png"
+                }
+            );
+
+            media.MediaContents.Add(
+                new MediaContent
+                {
+                    ImageSrc = "/Content/Redesign/PatientSearch2.png"
+                }
+            );
+
+            return View(media);
         }
     }
 }
