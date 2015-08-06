@@ -13,13 +13,11 @@
             <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
                 <img ng-src="{{item.ImageSrc}}"/>
             </div>
-            @*<div class="wrapper"><img src="~/Content/Redesign/Facilities1.png"/></div>
-            <div class="wrapper"><img src="~/Content/Redesign/Facilities2.png"/></div>*@
         </div>
     </div>
 
-    <span id="left-button">left</span>
-    <span id="right-button" ng-click="func()">right</span>
+    <span id="left-button" ng-click="prevImage()">left</span>
+    <span id="right-button" ng-click="nextImage()">right</span>
 </div>
 
 <script src="/Scripts/jquery-1.8.2.min.js"></script>
@@ -30,8 +28,12 @@
     .controller('MediaController', ['$scope', '$sce', '$http', '$timeout', function ($scope, $sce, $http, $timeout) {
         $scope.SelectedIndex = 0;
         $scope.Model = model;
-        $scope.func = function () {
-            $scope.SelectedIndex++;
+        $scope.nextImage = function () {
+            $scope.SelectedIndex = ($scope.SelectedIndex < $scope.Model.MediaContents.length - 1) ? $scope.SelectedIndex + 1 : $scope.SelectedIndex;
+        };
+
+        $scope.prevImage = function () {
+            $scope.SelectedIndex = ($scope.SelectedIndex > 0) ? $scope.SelectedIndex - 1 : $scope.SelectedIndex;
         };
     }]);
 </script>

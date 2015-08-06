@@ -66,7 +66,7 @@ namespace WebPortfolio.Controllers
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    ImageSrc = "/Content/Redesign/Login1.png"
+                    ImageSrc = "/Content/Redesign/Login1.jpg"
                 }
             );
 
@@ -81,13 +81,6 @@ namespace WebPortfolio.Controllers
                 new MediaContent
                 {
                     ImageSrc = "/Content/Redesign/PatientAccountLedger1.png"
-                }
-            );
-
-            media.MediaContents.Add(
-                new MediaContent
-                {
-                    ImageSrc = "/Content/Redesign/PatientAccountLedger2.png"
                 }
             );
 
