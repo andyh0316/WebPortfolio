@@ -19,7 +19,6 @@
         height: 60%;
         margin-top: 5%;
         box-shadow: 0px 0px 40px rgb(137, 137, 137);
-        border-radius: 3px;
         background-color: black;
     }
 
@@ -130,6 +129,7 @@
 
     #media-container .description-container {
         position: absolute;
+        width: 100%;
         bottom: 0px;
         color: black;
         background-color: rgba(255, 255, 255, 0.9);
