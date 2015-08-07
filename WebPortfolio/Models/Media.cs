@@ -15,5 +15,7 @@ namespace WebPortfolio.Models
     {
         public string ImageSrc { get; set; }
         public string VideoSrc { get; set; }
+        public string DescriptionTitle { get; set; }
+        public string Description { get; set; }
     }
 }

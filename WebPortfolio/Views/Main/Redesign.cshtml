@@ -8,21 +8,29 @@
 @Scripts.Render("~/bundles/angular")
 
 <div id="media-container" ng-app="MediaApp" ng-controller="MediaController">
-    <div class="media-content">
-        <div class="frame">  
-            <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
-                <img ng-src="{{item.ImageSrc}}"/>
+    <div class="frame">  
+        <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
+            <img ng-src="{{item.ImageSrc}}"/>
+            <div ng-show="item.DescriptionTitle || item.Description" class="description-container">
+                <div class="title">{{item.DescriptionTitle}}</div>
+                <div class="description">{{item.Description}}</div>
             </div>
         </div>
+
+        <span id="left-button" class="frame-button" ng-click="prevImage()"></span>
+        <span id="right-button" class="frame-button" ng-click="nextImage()"></span>
     </div>
 
-    <span id="left-button" ng-click="prevImage()">left</span>
-    <span id="right-button" ng-click="nextImage()">right</span>
+    <div class="thumbnails-container">
+        <div ng-repeat="item in Model.MediaContents" ng-click="$parent.SelectedIndex = $index" class="thumbnail" ng-class="{selected: $index == SelectedIndex}">
+            <img ng-src="{{item.ImageSrc}}"/>
+        </div>
+    </div>
 </div>
 
 <script src="/Scripts/jquery-1.8.2.min.js"></script>
 <script type="text/javascript">
-    var model = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)); // Image and video srcs are passed in as model from the backend
+    var model = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)); // Image srcs, video srcs and descrptions are passed in as model from the backend
 
     angular.module('MediaApp', [])
     .controller('MediaController', ['$scope', '$sce', '$http', '$timeout', function ($scope, $sce, $http, $timeout) {

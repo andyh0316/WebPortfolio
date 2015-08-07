@@ -52,14 +52,21 @@ namespace WebPortfolio.Controllers
 
             media.MediaContents.Add(
                 new MediaContent {
-                    ImageSrc = "/Content/Redesign/Facilities1.png"
+                    ImageSrc = "/Content/Redesign/Facilities1.png",
+                    DescriptionTitle = "Before Redesign",
+                    Description = "The colors of the design are too plain; it is mainly different shades of gray that do not make a good complementary design. "
+                    + "The color red is a bad choice since it represents errors. There are also too many sections within sections that leads to inefficient spacing."
+                    + "The data in the table are too tight together. "
                 }    
             );
 
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    ImageSrc = "/Content/Redesign/Facilities2.png"
+                    ImageSrc = "/Content/Redesign/Facilities2.png",
+                    DescriptionTitle = "After Redesign",
+                    Description = "I chose the colors light black, light blue and white as complementary background colors that separates the three largest areas of the application."
+                    + "I also removed the unnecessary nestings of sections that gives better spacing. I gave the overall application more spacing and more sharp colors for emphasis"
                 }
             );
 
