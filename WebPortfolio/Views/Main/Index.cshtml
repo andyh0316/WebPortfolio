@@ -43,7 +43,7 @@
         <div class="background"></div>
         <div class="vertical-panel-title">Design</div>
         <div class="vertical-panel-content">
-            Pictures containing some design work I've done for SupraMed in 2015.
+            Pictures containing some design work I've done for SupraMed in 2015. All the designs were implemented.
         </div>
     </div>
     <div id="videography-panel" class="vertical-panel">
@@ -79,7 +79,7 @@
             var $verticalPanels = $('#main-page-container .vertical-panel');
             $verticalPanels.each(function (index) {
                 animationSpeed = animationSpeed + 200;
-                $(this).animate({ "left": 0 }, animationSpeed, function () {
+                $(this).animate({ "left": "0px" }, animationSpeed, function () {
                     if (index == $verticalPanels.length - 1) { // end of last animation
                         $('#main-page-container .unclickable-overlay').hide(); // take away the overlay that prevents user from hovering and clicking
                     }

@@ -282,6 +282,9 @@
     <Content Include="Views\Jbabyusa\_Philosophy.cshtml" />
     <Content Include="Views\Jbabyusa\_Product.cshtml" />
     <Content Include="Views\Main\Redesign.cshtml" />
+    <Content Include="Views\Shared\Media.cshtml" />
+    <Content Include="Views\Main\Photography.cshtml" />
+    <Content Include="Views\Main\Videography.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
