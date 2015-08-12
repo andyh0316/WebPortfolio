@@ -32,21 +32,21 @@
             width: 100%;
             height: 100%;
             top: 0px;
-
-            opacity: 0;
+            visibility: hidden;
         }
 
             #media-container .frame .wrapper.selected {
-                opacity: 1;
+                visibility: visible;
 
-                transition: opacity 0.3s linear;
+                transition: visibility 0.3s linear;
             }
 
         #media-container .frame img {
             height: 100%;
         }
 
-        #media-container .frame iframe {
+        #media-container .frame iframe,
+        #media-container .frame embed {
             border: none;
             height: 100%;
             width: 100%;

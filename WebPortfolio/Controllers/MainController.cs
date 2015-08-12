@@ -246,9 +246,17 @@ namespace WebPortfolio.Controllers
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    ImageSrc = "http://img.youtube.com/vi/QksH65BmjK4/0.jpg",
+                    //ImageSrc = "http://img.youtube.com/vi/QksH65BmjK4/0.jpg",
                     VideoSrc = "https://www.youtube.com/embed/QksH65BmjK4",
-                    DescriptionTitle = "Parents: Indoor Remote Flashlight"
+                    //VideoSrc = "http://www.youtube.com/v/QksH65BmjK4?enablejsapi=1&version=3&playerapiid=ytplayer",
+                    //DescriptionTitle = "Parents: Indoor Remote Flashlight"
+                }
+            );
+
+            media.MediaContents.Add(
+                new MediaContent
+                {
+                    VideoSrc = "https://www.youtube.com/embed/H53183mVc2o"
                 }
             );
 

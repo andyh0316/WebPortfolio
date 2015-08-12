@@ -166,6 +166,7 @@
     <Content Include="Content\Redesign\PatientSearch1.png" />
     <Content Include="Content\Redesign\PatientSearch2.png" />
     <Content Include="Content\Redesign\Photo.PNG" />
+    <Content Include="Content\Resume\arrow.png" />
     <Content Include="Content\Style.css" />
     <Content Include="Content\Jbabyusa.css" />
     <Content Include="Content\Jbabyusa\Background\introduction.jpg" />

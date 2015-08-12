@@ -5,11 +5,11 @@
     <div id="angular-code">This page is developed in AngularJs, @Html.ActionLink("view the source code", "Angular", "Main", null, new { target = "_blank" }) to see how short it is!</div>
     <div class="frame">  
         <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
-            <img ng-if="!item.VideoSrc" ng-src="{{item.ImageSrc}}"/>
-            <iframe ng-if="item.VideoSrc" allowfullscreen ng-src="{{iframeSrc | trustAsIframeUrl: item.VideoSrc}}"></iframe>
+            <img ng-if="!item.VideoSrc" ng-src="{{item.ImageSrc}}"/></img>
+            <iframe id="lol" ng-if="item.VideoSrc" allowfullscreen ng-src="{{iframeSrc | trustAsIframeUrl: item.VideoSrc}}"></iframe>
         </div>
 
-        <div ng-if="Model.MediaContents[SelectedIndex].DescriptionTitle || Model.MediaContents[SelectedIndex].Description && Model.MediaContents[SelectedIndex].Played != true" class="description-container">
+        <div ng-if="Model.MediaContents[SelectedIndex].DescriptionTitle || Model.MediaContents[SelectedIndex].Description" class="description-container">
             <div class="title {{Model.MediaContents[SelectedIndex].DescriptionClass}}">{{Model.MediaContents[SelectedIndex].DescriptionTitle}}</div>
             <div class="description">{{Model.MediaContents[SelectedIndex].Description}}</div>
         </div>
@@ -33,18 +33,11 @@
         $scope.SelectedIndex = 0
         $scope.nextImage = function () {
             $scope.SelectedIndex = ($scope.SelectedIndex < $scope.Model.MediaContents.length - 1) ? $scope.SelectedIndex + 1 : $scope.SelectedIndex;
+            document.getElementById('lol').stopVideo();
         };
 
         $scope.prevImage = function () {
             $scope.SelectedIndex = ($scope.SelectedIndex > 0) ? $scope.SelectedIndex - 1 : $scope.SelectedIndex;
         };
-
-        $scope.func = function () {
-            alert("lol");
-        };
-    }]).filter('trustAsIframeUrl', ['$sce', function ($sce) {
-        return function (val, url) {
-            return $sce.trustAsResourceUrl(url);
-        };
-    }]);;
+    }]).filter('trustAsIframeUrl', ['$sce', function ($sce) { return function (val, url) { return $sce.trustAsResourceUrl(url); }; }]);;
 </script>
