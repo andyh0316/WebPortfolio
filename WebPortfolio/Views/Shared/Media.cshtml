@@ -5,8 +5,8 @@
     <div id="angular-code">This page is developed in AngularJs, @Html.ActionLink("view the source code", "Angular", "Main", null, new { target = "_blank" }) to see how short it is!</div>
     <div class="frame">  
         <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
-            <img ng-if="!item.VideoSrc" ng-src="{{item.ImageSrc}}"/></img>
-            <iframe id="lol" ng-if="item.VideoSrc" allowfullscreen ng-src="{{iframeSrc | trustAsIframeUrl: item.VideoSrc}}"></iframe>
+            <img class="image" ng-src="{{item.ImageSrc}}"/>
+            <iframe ng-if="item.VideoSrc" allowfullscreen ng-src="{{iframeSrc | trustAsIframeUrl: item.VideoSrc}}"></iframe>
         </div>
 
         <div ng-if="Model.MediaContents[SelectedIndex].DescriptionTitle || Model.MediaContents[SelectedIndex].Description" class="description-container">

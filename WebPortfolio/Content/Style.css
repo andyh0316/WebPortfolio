@@ -28,9 +28,10 @@
     }
 
         #media-container .frame .wrapper {
-            position: absolute;
+            position: relative;
             width: 100%;
             height: 100%;
+            text-align: center;
             top: 0px;
             visibility: hidden;
         }
@@ -41,7 +42,7 @@
                 transition: visibility 0.3s linear;
             }
 
-        #media-container .frame img {
+        #media-container .frame .image {
             height: 100%;
         }
 
