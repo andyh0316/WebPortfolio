@@ -5,7 +5,7 @@
     <div id="angular-code">This page is developed in AngularJs, @Html.ActionLink("view the source code", "Angular", "Main", null, new { target = "_blank" }) to see how short it is!</div>
     <div class="frame">  
         <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
-            <img ng-if="!item.VideoSrc" ng-src="{{item.ImageSrc}}"/>
+            <img class="image" ng-src="{{item.ImageSrc}}"/>
             <iframe ng-if="item.VideoSrc" allowfullscreen ng-src="{{iframeSrc | trustAsIframeUrl: item.VideoSrc}}"></iframe>
         </div>
 
@@ -38,13 +38,5 @@
         $scope.prevImage = function () {
             $scope.SelectedIndex = ($scope.SelectedIndex > 0) ? $scope.SelectedIndex - 1 : $scope.SelectedIndex;
         };
-
-        $scope.func = function () {
-            alert("lol");
-        };
-    }]).filter('trustAsIframeUrl', ['$sce', function ($sce) {
-        return function (val, url) {
-            return $sce.trustAsResourceUrl(url);
-        };
-    }]);;
+    }]).filter('trustAsIframeUrl', ['$sce', function ($sce) { return function (val, url) { return $sce.trustAsResourceUrl(url); }; }]);;
 </script>
