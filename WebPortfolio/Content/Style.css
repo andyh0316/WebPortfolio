@@ -76,13 +76,6 @@
             overflow-y: auto;
         }
 
-            /*#media-container .thumbnails-container:hover {
-                overflow-y:scroll;
-            }*/
-
-            #media-container .thumbnails-container::-webkit-scrollbar {
-                
-            }
 
             #media-container .thumbnails-container .thumbnail {
                 position: relative;
@@ -135,7 +128,7 @@
         background-repeat: no-repeat;
         background-position: center center;
         border: 1px solid #B7B7B7;
-        opacity: 0;
+        opacity: 0.4;
         top: 45%;
         z-index: 2;
     }
