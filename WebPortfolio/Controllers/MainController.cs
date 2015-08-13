@@ -238,6 +238,7 @@ namespace WebPortfolio.Controllers
 
         public ActionResult Videography()
         {
+            string enableJsapi = "?enablejsapi=1";
             Media media = new Media
             {
                 MediaContents = new List<MediaContent>()
@@ -247,7 +248,7 @@ namespace WebPortfolio.Controllers
                 new MediaContent
                 {
                     ImageSrc = "http://img.youtube.com/vi/QksH65BmjK4/0.jpg",
-                    VideoSrc = "https://www.youtube.com/embed/QksH65BmjK4?enablejsapi=1",
+                    VideoSrc = "https://www.youtube.com/embed/QksH65BmjK4" + enableJsapi
                     //VideoSrc = "http://www.youtube.com/v/QksH65BmjK4?enablejsapi=1&version=3&playerapiid=ytplayer",
                     //DescriptionTitle = "Parents: Indoor Remote Flashlight"
                 }
@@ -256,7 +257,7 @@ namespace WebPortfolio.Controllers
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    VideoSrc = "https://www.youtube.com/embed/H53183mVc2o?enablejsapi=1"
+                    VideoSrc = "https://www.youtube.com/embed/H53183mVc2o" + enableJsapi,
                 }
             );
 
