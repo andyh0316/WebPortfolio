@@ -2,42 +2,39 @@
 @Scripts.Render("~/bundles/angular")
 
 <div id="media-container" ng-app="MediaApp" ng-controller="MediaController">
-    @*<div id="angular-code">This page is developed in AngularJs, @Html.ActionLink("view the source code", "Angular", "Main", null, new { target = "_blank" }) to see how short it is!</div>*@
-    <div class="frame">  
-        <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
-            <img class="image" ng-src="{{item.ImageSrc}}"/>
-            <iframe ng-if="item.VideoSrc" allowfullscreen ng-src="{{iframeSrc | trustAsIframeUrl: item.VideoSrc}}"></iframe>
+    <div class="content-container">
+        <div class="frame">  
+            <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
+                <img ng-if="!item.VideoSrc" class="image" ng-src="{{item.ImageSrc}}"/> @*Picture*@
+                <iframe ng-if="item.VideoSrc" allowfullscreen ng-src="{{iframeSrc | trustAsIframeUrl: item.VideoSrc}}"></iframe> @*Video*@
+            </div>
+            <span id="left-button" class="frame-button" ng-click="SelectedIndex = (SelectedIndex > 0) ? SelectedIndex - 1 : SelectedIndex;"></span>
+            <span id="right-button" class="frame-button" ng-click="SelectedIndex = (SelectedIndex < Model.MediaContents.length - 1) ? SelectedIndex + 1 : SelectedIndex"></span>
         </div>
-
         <div ng-if="Model.MediaContents[SelectedIndex].DescriptionTitle || Model.MediaContents[SelectedIndex].Description" class="description-container">
             <div class="title {{Model.MediaContents[SelectedIndex].DescriptionClass}}">{{Model.MediaContents[SelectedIndex].DescriptionTitle}}</div>
             <div class="description">{{Model.MediaContents[SelectedIndex].Description}}</div>
         </div>
-
-        <span id="left-button" class="frame-button" ng-click="prevImage()"></span>
-        <span id="right-button" class="frame-button" ng-click="nextImage()"></span>
     </div>
-
     <div class="thumbnails-container">
         <div ng-repeat="item in Model.MediaContents" ng-click="$parent.SelectedIndex = $index" class="thumbnail" ng-class="{selected: $index == SelectedIndex}">
             <img ng-src="{{item.ImageSrc}}"/>
         </div>
     </div>
+    <div id="angular-code">This is developed in AngularJS, @Html.ActionLink("view the source code", "Angular", "Main", null, new { target = "_blank" }) to see how short it is!</div>
 </div>
 
+<script src="/Scripts/jquery-1.8.2.min.js"></script>
 <script type="text/javascript">
     angular.module('MediaApp', [])
     .controller('MediaController', ['$scope', '$sce', '$http', '$timeout', function ($scope, $sce, $http, $timeout) {
         $scope.Model = model; // Image srcs, video srcs and descrptions are passed in as model from the backend
         $scope.iframeSrc = '';
         $scope.SelectedIndex = 0
-        $scope.nextImage = function () {
-            $scope.SelectedIndex = ($scope.SelectedIndex < $scope.Model.MediaContents.length - 1) ? $scope.SelectedIndex + 1 : $scope.SelectedIndex;
-            document.getElementById('lol').stopVideo();
-        };
-
-        $scope.prevImage = function () {
-            $scope.SelectedIndex = ($scope.SelectedIndex > 0) ? $scope.SelectedIndex - 1 : $scope.SelectedIndex;
-        };
+        $scope.$watch('SelectedIndex', function (newVal, oldVal) {
+            $('iframe').each(function () {
+                $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*'); // stop all video on video switch
+            }); 
+        });
     }]).filter('trustAsIframeUrl', ['$sce', function ($sce) { return function (val, url) { return $sce.trustAsResourceUrl(url); }; }]);;
 </script>
