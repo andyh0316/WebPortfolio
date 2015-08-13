@@ -2,7 +2,7 @@
 @Scripts.Render("~/bundles/angular")
 
 <div id="media-container" ng-app="MediaApp" ng-controller="MediaController">
-    <div id="angular-code">This page is developed in AngularJs, @Html.ActionLink("view the source code", "Angular", "Main", null, new { target = "_blank" }) to see how short it is!</div>
+    @*<div id="angular-code">This page is developed in AngularJs, @Html.ActionLink("view the source code", "Angular", "Main", null, new { target = "_blank" }) to see how short it is!</div>*@
     <div class="frame">  
         <div ng-repeat="item in Model.MediaContents" class="wrapper" ng-class="{selected: $index == SelectedIndex}">
             <img class="image" ng-src="{{item.ImageSrc}}"/>
