@@ -238,7 +238,7 @@ namespace WebPortfolio.Controllers
 
         public ActionResult Videography()
         {
-            string enableJsapi = "?enablejsapi=1";
+            string optionParams = "?enablejsapi=1&rel=0";
             Media media = new Media
             {
                 MediaContents = new List<MediaContent>()
@@ -247,17 +247,21 @@ namespace WebPortfolio.Controllers
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    ImageSrc = "http://img.youtube.com/vi/QksH65BmjK4/0.jpg",
-                    VideoSrc = "https://www.youtube.com/embed/QksH65BmjK4" + enableJsapi
-                    //VideoSrc = "http://www.youtube.com/v/QksH65BmjK4?enablejsapi=1&version=3&playerapiid=ytplayer",
-                    //DescriptionTitle = "Parents: Indoor Remote Flashlight"
+                    ImageSrc = "http://img.youtube.com/vi/nJf0DIEUAdU/0.jpg",
+                    VideoSrc = "https://www.youtube.com/embed/nJf0DIEUAdU" + optionParams,
+                    DescriptionTitle = "Trailer",
+                    Description = "A sample trailer of a movie I made for student organization in college for members. " +
+                    "Won top 3 student videos for Chinese CCTV awards ceremony at USC."
                 }
             );
 
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    VideoSrc = "https://www.youtube.com/embed/H53183mVc2o" + enableJsapi,
+                    ImageSrc = "http://img.youtube.com/vi/N1sHoejKG8A/0.jpg",
+                    VideoSrc = "https://www.youtube.com/embed/N1sHoejKG8A" + optionParams,
+                    DescriptionTitle = "Commmercial",
+                    Description = "A commercial video made for NextHomeTech, a start up mobile controlled lightbulb company."
                 }
             );
 

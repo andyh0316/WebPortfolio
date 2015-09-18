@@ -6,10 +6,6 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
 @Styles.Render("~/Content/main")
 
-<div id="mobile-only-container" style="display: none;">
-    This web portfolio is developed only to display on computers
-</div>
-
 <div id="intro-page-container">
     <div id="main-content">
         <div class="name">Andy Hong</div>
@@ -77,9 +73,7 @@
 
     $(document).ready(function () {
         if (jQuery.browser.mobile) {
-            $('#mobile-only-container').show();
-            $('#intro-page-container').hide();
-            $('#main-page-container').hide();
+            alert("You are using a mobile device. \n This website is not designed for mobile devices and will not display correctly. Please view on a computer.");
         }
 
         $('#go-portfolio-button').click(function () {
