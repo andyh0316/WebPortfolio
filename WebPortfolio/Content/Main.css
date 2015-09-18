@@ -21,6 +21,10 @@
     height: 100%;
 
     z-index: 1;
+
+    background-color: black;
+    background-image: url(/Content/Main/background.png);
+    background-size: cover;
 }
 
     #intro-page-container #main-content {
@@ -46,7 +50,7 @@
     #intro-page-container .button {
         position: relative;
         display: inline-block;
-        background-color: rgb(32, 32, 32);
+        background-color: rgba(0, 0, 0, 0);
         border: 1px solid white;
         height: 50px;
         font-size: 20px;
@@ -99,7 +103,6 @@
         float: left;
         width: 20%;
         height: 100%;
-        /*background-color: rgb(31, 29, 29);*/
         background-color: rgb(32, 32, 32);
         box-sizing: border-box;
 
@@ -115,17 +118,14 @@
         }
 
         .vertical-panel:hover {
-            /*background-color: rgb(247, 247, 247);*/
-            /*color: rgb(219, 219, 219);*/
             transition: all 0.4s ease-in-out;
-            /*color: black;*/
             cursor: pointer;
 
             border-right: none;
         }
 
             .vertical-panel:hover .background {
-                opacity: 0.20 !important;
+                opacity: 0.30 !important;
                 transition: all 0.4s ease-in-out;
             }
 
@@ -147,7 +147,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            opacity: 0.05;
+            opacity: 0.10;
             background-size: 100% auto;
             background-color: rgb(211, 211, 211);
             background-repeat: no-repeat;
