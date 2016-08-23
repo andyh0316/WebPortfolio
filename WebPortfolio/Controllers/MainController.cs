@@ -38,6 +38,14 @@ namespace WebPortfolio.Controllers
                     };
         }
 
+        public void DownloadResumePdf()
+        {
+            Response.ContentType = "application/octet-stream";
+            Response.AppendHeader("Content-Disposition", "attachment; filename=resume.pdf");
+            Response.TransmitFile(Server.MapPath("/Content/Resume/resume.pdf"));
+            Response.End();
+        }
+
         public ActionResult JBabyUsa()
         {
             return View("/Views/Jbabyusa/Index.cshtml");
