@@ -143,6 +143,8 @@
   <ItemGroup>
     <Content Include="Content\angularcode.png" />
     <Content Include="Content\Main\arrow-left.png" />
+    <Content Include="Content\Main\arrow-right.png" />
+    <Content Include="Content\Main\background.jpg" />
     <Content Include="Content\Photography\IMG_4003.jpg" />
     <Content Include="Content\Photography\IMG_5639.jpg" />
     <Content Include="Content\Photography\IMG_5640.jpg" />
