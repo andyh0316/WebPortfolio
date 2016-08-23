@@ -8,15 +8,25 @@
             <div id="name">Haitian Hong</div>
             <div id="position">
                 Full Stack Software Engineer
-                @if (ViewBag.IsHtml != null && ViewBag.IsHtml == true)
-                {
-                    @*<a href="/Main/ResumePdf/" style="font-size: 16px;">View PDF Version</a>*@
-                }
             </div>
         </div>
         <div class="right-block">
-            <div><span>Email: </span><span>andyhong0316@yahoo.com</span></div>
-            <div><img class="arrow" src="/Content/Resume/arrow.png"/><span>Web Portfolio: </span><span id="email"><a href="http://www.haitianhong.com">www.HaitianHong.com</a></span></div>
+            <div><span>Email: </span><span>Andyhong0316@yahoo.com</span></div>
+            <div>
+                @if (ViewBag.IsHtml != null && ViewBag.IsHtml == true)
+                {
+                    <img class="arrow" src="/Content/Resume/arrow.png"/ style="right: 130px;">
+                    <a href="/Main/ResumePdf/" style="font-size: 16px; margin-left: 2px;">View Printable PDF</a>
+                } 
+                else 
+                {
+                    <img class="arrow" src="/Content/Resume/arrow.png"/>
+                    <span>Web Portfolio: </span>
+                    <span id="email">
+                        <a href="http://www.haitianhong.com">www.HaitianHong.com</a>
+                    </span>
+                }
+            </div>
         </div>
     </div>
     @*<img src="@Url.Content("/Content/Resume/work.png")"/>*@
@@ -33,15 +43,15 @@
                     <div class="skill-rating"><div class="skill-rating-percent" style="width: 50%;"></div></div>
                 </div>
                 <div class="skill-row">
-                    <div class="skill-title">UI Development: HTML5, CSS3</div>
+                    <div class="skill-title">UI Development: HTML5, SASS, CSS3</div>
                     <div class="skill-rating"><div class="skill-rating-percent" style="width: 90%;"></div></div>
                 </div>
                 <div class="skill-row">
-                    <div class="skill-title">Frontend Development: Angularjs, JQuery, AJAX, Javascript</div>
+                    <div class="skill-title">Frontend Development: Angularjs, JQuery, Javascript</div>
                     <div class="skill-rating"><div class="skill-rating-percent" style="width: 80%;"></div></div>
                 </div>
                 <div class="skill-row">
-                    <div class="skill-title">Backend Development: C# & ASP.NET</div>
+                    <div class="skill-title">Backend Development: .NET C#</div>
                     <div class="skill-rating"><div class="skill-rating-percent"></div></div>
                 </div>
                 <div class="skill-row">
@@ -59,8 +69,22 @@
             <div class="section-content">
                 <div class="section-row">
                     <div class="section-row-header">
-                        <div class="section-row-title">SupraMed - Full Stack Web Developer</div>
-                        <div class="section-row-subtitle">Jul 2014 - Present</div>
+                        <div class="section-row-title">Cobro Consulting: Software Architect / Full Stack Engineer</div>
+                        <div class="section-row-subtitle">Oct 2015 - Present</div>
+                    </div>
+                    <div class="section-row-content">As the sole developer to rebuild the company's core software from scratch, 
+                        my tasks includes architecture, UI/UX design, UI implentation, frontend implementation, backend implementation, 
+                        deployment, multi-tenant relational database design and scripting to transfer from old database to new database.
+                        The new student management system is faster, easier to use, more maintainable and better looking. The software
+                        is currently being used by 40 tenants and hundreds of users, who use the management features and report to
+                        navigate millions of records. 
+                    </div>
+                </div>
+
+                <div class="section-row">
+                    <div class="section-row-header">
+                        <div class="section-row-title">SupraMed: Full Stack Web Developer</div>
+                        <div class="section-row-subtitle">Jul 2014 - Oct 2015</div>
                     </div>
                     <div class="section-row-content">Developed an enterprise-scale plastic surgeon EHR software system capable of managing an entire facility's process.
                     My role as a full stack developer includes designing/developing UI, designing/developing functionality and managing database. Some features includes:
@@ -70,7 +94,7 @@
             
                 <div class="section-row">
                     <div class="section-row-header">
-                        <div class="section-row-title">Humana: nliven Systems - Software Engineer</div>
+                        <div class="section-row-title">Humana: Software Engineer</div>
                         <div class="section-row-subtitle">May 2013 - Jul 2014</div>
                     </div>
                     <div class="section-row-content">Developed a grand scale health-care management system for the government. Mainly responsible for backend development
@@ -80,24 +104,24 @@
 
                 <div class="section-row">
                     <div class="section-row-header">
-                        <div class="section-row-title">JbabyUSA - Front-end Developer</div>
+                        <div class="section-row-title">JbabyUSA: Frontend Developer</div>
                         <div class="section-row-subtitle">Startup Part Time: Jul 2013 - Sept 2013</div>
                     </div>
                     <div class="section-row-content">Designed and developed the landing page and backend mailer for a baby onesie company started by a friend. (Sample: <a href="http://haitianhong.com/Main/JBabyUsa" style="text-decoration: none;">www.haitianhong.com/main/jbabyusa</a>)</div>
                 </div>
 
-                <div class="section-row">
+                @*<div class="section-row">
                     <div class="section-row-header">
                         <div class="section-row-title">NextHomeTech - Full Stack Developer</div>
                         <div class="section-row-subtitle">Startup Part time: Sept 2012 - May 2014</div>
                     </div>
                     <div class="section-row-content">Developed NextHomeTech web and mobile applications. NextHomeTech is a startup technology company that produces and sells lightbulbs controlled by mobile devices. 
                         (Temporary Site: <a href="Http://www.nexthometech.com/" style="text-decoration: none;">www.nexthometech.com</a> & <a href="Http://www.nexthometech.com/andyhong" style="text-decoration: none;">www.nexthometech.com/andyhong</a>)</div>
-                </div>
+                </div>*@
 
                 <div class="section-row">
                     <div class="section-row-header">
-                        <div class="section-row-title">Commonwealth - IT Rep Tech Intern</div>
+                        <div class="section-row-title">Commonwealth: IT Rep Tech Intern</div>
                         <div class="section-row-subtitle">Jan 2011 - Apr 2011</div>
                     </div>
                     <div class="section-row-content">Customer technical phone support, encryption installation and building computers. Developed patience by learning to listen and deal with occassional whiners with bad attitudes on phone.</div>
@@ -105,7 +129,7 @@
 
                 <div class="section-row">
                     <div class="section-row-header">
-                        <div class="section-row-title">University of California: San Diego - Tutor</div>
+                        <div class="section-row-title">University of California San Diego: Tutor</div>
                         <div class="section-row-subtitle">March 2008 - June 2008</div>
                     </div>
                     <div class="section-row-content">Tutor and supervise students of an intro Computer Science course. Responsible for helping lab students understand 
@@ -137,11 +161,10 @@
                 <div class="title">Personal</div>
             </div>
             <div class="section-content">
-                <div>Mandarin Chinese: Native proficiency in speaking, reading and writing</div>
-                <div>Videography: Professional filmer and video editor.</div>
-                <div>Photography: Semi-professional photographer utilizing basic lighting.</div>
+                <div>- Native proficiency in Mandarin Chinese, Professional working proficiency in English, both in reading, writing and speaking.</div>
+                <div>- Professional filmer and video editor. Semi-professional photographer.</div>
                 <div>
-                    What Else: I am an easy-going person. I don't complain. 
+                    - I am an easy-going person. I don't complain. 
                     I am a very meticulous and detail oriented person.
                     I am good at multitasking (I am watching Two and Half Men as I'm writing this resume. But don't worry I won't do that at work). 
                     I like to swim daily. I like the color blue. And I don't do drugs.
@@ -173,7 +196,7 @@
         height: 1414px; /* fits PDF height: needs to be exact, may change based on margin */
         margin: 0 auto;
         box-sizing: border-box;
-        font-size: 20px;
+        font-size: 19px;
         color: rgb(60, 60, 60);
     }
 
