@@ -52,86 +52,59 @@ namespace WebPortfolio.Controllers
 
             media.MediaContents.Add(
                 new MediaContent {
-                    ImageSrc = "/Content/Redesign/Facilities1.png",
-                    DescriptionTitle = "Before Redesign: Application",
-                    DescriptionClass = "red",
-                    Description = "The colors of the design are too plain; it is mainly different shades of gray that do not make a good complementary design. "
-                    + "The color red is a bad choice since it represents errors. There are also too many sections within sections that leads to inefficient spacing. "
-                    + "The data in the table are too tight together. "
+                    ImageSrc = "/Content/Redesign/Cobro1.png",
+                    DescriptionTitle = "Cobro Compass Landing Page",
+                    DescriptionClass = "green",
+                    Description = "The landing page for the Cobro Compass application. "
                 }    
             );
 
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    ImageSrc = "/Content/Redesign/Facilities2.png",
-                    DescriptionTitle = "After Redesign: Application",
+                    ImageSrc = "/Content/Redesign/Cobro2.png",
+                    DescriptionTitle = "Cobo Compass Students Page",
                     DescriptionClass = "green",
-                    Description = "I chose the colors light black, light blue and white as complementary background colors that separates the three largest areas of the application. "
-                    + "I also removed the unnecessary nestings of sections that gives better spacing. I gave the overall application more spacing and more sharp colors for emphasis. "
+                    Description = "The Students one page application has many features that are hidden at first. You can use the search box to quickly search students by their ID or names." +
+                    "You can also use the Advanced search box for more filters such as Current Grade Level. You could use the checkboxes on the left to select students to perform " +
+                    "bulk updates. And although paginations are server side, the entire page never refreshes and will remember what you've selected on the previous paginations. " +
+                    "Lastly, you can click on a student row to view student details without leaving the page. All this is made easy by angularJS."
+
                 }
             );
 
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    ImageSrc = "/Content/Redesign/Login1.jpg",
-                    DescriptionTitle = "Before Redesign: Login",
-                    DescriptionClass = "red",
-                    Description = "The users sees the login screen everyday, they don't need to see the Labels 'Practice Account #', "
-                    + "'User Name' and 'Password' repeatedly. And the gradient is old school like the 90s."
-                }
-            );
-
-            media.MediaContents.Add(
-                new MediaContent
-                {
-                    ImageSrc = "/Content/Redesign/Login2.png",
-                    DescriptionTitle = "After Redesign: Login",
+                    ImageSrc = "/Content/Redesign/Cobro3.png",
+                    DescriptionTitle = "Login Box",
                     DescriptionClass = "green",
-                    Description = "Looks a little bit more aesthetically pleasing. The labels are replaced by the icons which should be intuitive enough. "
-                    + "Also, the textbox sizes are enlarged for clickers to click more easily."
+                    Description = "The login box is something users see first everyday when using the application. It should be simple and big " +
+                    "so that it is easier for users to type in their crendentials. Icons are used to subsitutes the labels for fields because it should " +
+                    "be intuitive enough for users to figure which field is what. "
                 }
             );
 
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    ImageSrc = "/Content/Redesign/PatientAccountLedger1.png",
-                    DescriptionTitle = "Before Redesign: Patient Information",
-                    DescriptionClass = "red",
-                    Description = "The patient header information are a bunch of flat text that doesn't emphasize information by importance."
-                }
-            );
-
-            media.MediaContents.Add(
-                new MediaContent
-                {
-                    ImageSrc = "/Content/Redesign/PatientAccountLedger2.png",
-                    DescriptionTitle = "After Redesign: Patient Information",
+                    ImageSrc = "/Content/Redesign/PatientAccountLedger.png",
+                    DescriptionTitle = "SupraMed Patient Page",
                     DescriptionClass = "green",
-                    Description = "The patient header information are emphasized in order of importance by font, boldness, and color. "
-                    + "The labels are deemphasized with small font and color because they become less important as users become more familiar. "
-                    + "Some labels are removed because the contents are self-explanatory"
+                    Description = "The patient page prioritize information by different font-sizes, font-weight, colors and positions. For pages like these where users use everyday, " +
+                    "we don't want to make everything look flat because we want the users to be able to find information very quickly based. By giving them different attributes, the users " +
+                    "will slowly adapt to them and remember where to look for the information they need"
                 }
             );
 
             media.MediaContents.Add(
                 new MediaContent
                 {
-                    ImageSrc = "/Content/Redesign/PatientSearch1.png",
-                    DescriptionTitle = "Before Redesign: Patient Search",
-                    DescriptionClass = "red",
-                    Description = "This is just plain ugly."
-                }
-            );
-
-            media.MediaContents.Add(
-                new MediaContent
-                {
-                    ImageSrc = "/Content/Redesign/PatientSearch2.png",
-                    DescriptionTitle = "After Redesign: Patient Search",
-                    DescriptionClass = "green"
+                    ImageSrc = "/Content/Redesign/Photo.png",
+                    DescriptionTitle = "SupraMed Photo Management",
+                    DescriptionClass = "green",
+                    Description = "The photo management feature loads the thumbnails into the container first. Then in the background, it will start to load the actual images in order. If " +
+                    "the user clicks on an image that has not been loaded yet it will priorize that image for loading. This is because we want the user to be able to open images as fast as possible."
                 }
             );
 
