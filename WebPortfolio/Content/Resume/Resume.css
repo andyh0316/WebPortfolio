@@ -1,0 +1,166 @@
+﻿@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/Content/MaterialIcons/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2"), url(/Content/MaterialIcons/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.woff) format("woff"); }
+
+.material-icons, #resume-container .section-icon:after {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: bottom;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+body {
+  background-color: black;
+  padding: 0px;
+  margin: 0px; }
+
+#resume-container {
+  position: relative;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: whitesmoke;
+  width: 1000px;
+  /* fits PDF width: approximate, PDF will shrink width to fit */
+  height: 1414px;
+  /* fits PDF height: needs to be exact, may change based on margin */
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 19px;
+  color: #3c3c3c; }
+  #resume-container #footer {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 3px;
+    left: 0px;
+    font-size: 16px;
+    letter-spacing: 0px; }
+  #resume-container #header {
+    overflow: auto;
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    background-color: #41b2cd;
+    color: white; }
+    #resume-container #header .left-block {
+      width: 50%;
+      float: left; }
+    #resume-container #header .right-block {
+      width: 50%;
+      float: right;
+      text-align: right;
+      padding-top: 10px; }
+    #resume-container #header #name {
+      font-size: 50px;
+      font-weight: bolder;
+      line-height: 90%; }
+    #resume-container #header #position {
+      padding-left: 2px; }
+    #resume-container #header #email {
+      text-decoration: underline; }
+  #resume-container a {
+    color: inherit; }
+  #resume-container .section {
+    margin: 8px 0px 8px 0px;
+    padding: 0px 10px 0px 10px;
+    box-sizing: border-box; }
+    #resume-container .section .section-title {
+      border-bottom: 1px solid #dadada;
+      padding-bottom: 5px;
+      color: #41b2cd; }
+      #resume-container .section .section-title .section-icon {
+        position: relative;
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        background-size: cover;
+        /*opacity: 0.7;*/
+        margin-right: 15px;
+        top: 0px; }
+      #resume-container .section .section-title .title {
+        display: inline-block;
+        font-size: 28px;
+        font-weight: 600; }
+  #resume-container #resume-container-content {
+    padding: 15px 40px 15px 40px; }
+  #resume-container .section-row {
+    margin-bottom: 15px;
+    margin-top: 15px; }
+    #resume-container .section-row .section-row-header {
+      overflow: auto; }
+    #resume-container .section-row .section-row-title {
+      float: left;
+      font-weight: 600;
+      font-size: 20px;
+      color: #5a5a5a; }
+    #resume-container .section-row .section-row-subtitle {
+      float: right;
+      font-size: 20px; }
+    #resume-container .section-row .section-row-content {
+      line-height: 120%;
+      text-align: justify; }
+  #resume-container .section-icon:after {
+    font-size: 29px;
+    position: relative;
+    top: 4px;
+    color: #41b2cd; }
+  #resume-container .section-icon.education:after {
+    content: "school"; }
+  #resume-container .section-icon.experience:after {
+    content: "work"; }
+  #resume-container .section-icon.other:after {
+    content: "person"; }
+  #resume-container .section-icon.skill:after {
+    content: "description"; }
+  #resume-container .section-icon.objective:after {
+    content: "turned_in"; }
+  #resume-container .section .section-content {
+    padding: 10px 20px 10px 20px; }
+  #resume-container .skill-row {
+    overflow: auto; }
+  #resume-container .skill-row .skill-title {
+    float: left;
+    width: 400px; }
+  #resume-container .skill-row .skill-rating {
+    position: relative;
+    top: 12px;
+    float: left;
+    width: 300px;
+    height: 6px;
+    background-color: #aee1ed; }
+  #resume-container .skill-row .skill-rating .skill-rating-percent {
+    background-color: #41b2cd;
+    height: 100%; }
+  #resume-container .half {
+    width: 50%; }
+  #resume-container .float-left {
+    float: left; }
+  #resume-container .float-right {
+    float: right; }
+  #resume-container .clearfix {
+    clear: both; }
+  #resume-container .arrow {
+    position: absolute;
+    right: 270px;
+    top: 43px;
+    display: inline-block;
+    width: 32px;
+    height: 32px; }

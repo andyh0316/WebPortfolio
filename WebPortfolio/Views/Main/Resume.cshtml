@@ -2,12 +2,16 @@
     Layout = null;
 }
 
+@Styles.Render("~/Content/Resume/css")
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300' rel='stylesheet' type='text/css'>
+
 <div id="resume-container">
     <div id="header">
         <div class="left-block">
             <div id="name">Haitian Hong</div>
             <div id="position">
-                Full Stack Software Engineer
+                A Real Full Stack Software Engineer
             </div>
         </div>
         <div class="right-block">
@@ -17,10 +21,10 @@
                 {
                     <img class="arrow" src="/Content/Resume/arrow.png"/ style="right: 130px;">
                     <a href="/Main/DownloadResumePdf/" style="font-size: 16px; margin-left: 2px;">View Printable PDF</a>
-                } 
-                else 
+                }
+                else
                 {
-                    <img class="arrow" src="/Content/Resume/arrow.png"/>
+                    <img class="arrow" src="/Content/Resume/arrow.png" />
                     <span>Web Portfolio: </span>
                     <span id="email">
                         <a href="http://www.haitianhong.com">www.HaitianHong.com</a>
@@ -29,34 +33,60 @@
             </div>
         </div>
     </div>
-    @*<img src="@Url.Content("/Content/Resume/work.png")"/>*@
 
     <div id="resume-container-content">
         <div class="section">
             <div class="section-title">
+                <div class="objective section-icon"></div>
+                <div class="title">Objective</div>
+            </div>
+            <div class="section-content">
+                <div class="section-row">
+                    @*<div class="section-row-header">
+                        <div class="section-row-title">University of California, San Diego: Jacobs School of Engineering</div>
+                    </div>*@
+                    <div class="section-row-content">
+                        As an experienced solo/lead developer, I am seeking for a position where I can fully utilize my passion and ability to build a mid-scale high quality 
+                        web system completely from scratch. I will cover every aspect needed for a complete product: all the way from graphics design, architectural design, 
+                        development, to deployment. 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
                 <div class="skill section-icon"></div>
-                <div class="title">Skill</div>
+                <div class="title">Full Stack Skills</div>
             </div>
             <div class="section-content">
                 <div class="skill-row">
-                    <div class="skill-title">UI/UX Design</div>
-                    <div class="skill-rating"><div class="skill-rating-percent" style="width: 50%;"></div></div>
-                </div>
-                <div class="skill-row">
-                    <div class="skill-title">UI Development: HTML5, SASS, CSS3</div>
-                    <div class="skill-rating"><div class="skill-rating-percent" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill-row">
-                    <div class="skill-title">Frontend Development: Angularjs, JQuery, Javascript</div>
+                    <div class="skill-title">Software Architecture</div>
                     <div class="skill-rating"><div class="skill-rating-percent" style="width: 80%;"></div></div>
                 </div>
                 <div class="skill-row">
-                    <div class="skill-title">Backend Development: .NET C#</div>
+                    <div class="skill-title">UI/UX Design</div>
+                    <div class="skill-rating"><div class="skill-rating-percent" style="width: 70%;"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-title">UI/UX Development: HTML, CSS/SASS</div>
+                    <div class="skill-rating"><div class="skill-rating-percent" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-title">Frontend Development: AngularJS, Javascript/JQuery</div>
+                    <div class="skill-rating"><div class="skill-rating-percent" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-title">Backend Development: C#, .NET, Entity Framework</div>
                     <div class="skill-rating"><div class="skill-rating-percent"></div></div>
                 </div>
                 <div class="skill-row">
                     <div class="skill-title">Database: Microsoft SQL</div>
-                    <div class="skill-rating"><div class="skill-rating-percent" style="width: 70%;"></div></div>
+                    <div class="skill-rating"><div class="skill-rating-percent" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-title">Server Management: AWS, Azure</div>
+                    <div class="skill-rating"><div class="skill-rating-percent" style="width: 80%;"></div></div>
                 </div>
             </div>
         </div>
@@ -64,77 +94,80 @@
         <div class="section">
             <div class="section-title">
                 <div class="experience section-icon"></div>
-                <div class="title">Experience</div>
+                <div class="title">Work Experience</div>
             </div>
             <div class="section-content">
                 <div class="section-row">
                     <div class="section-row-header">
-                        <div class="section-row-title">Cobro Consulting: Software Architect / Full Stack Engineer</div>
+                        <div class="section-row-title">Cobro Consulting: Lead Full Stack Developer / Software Architect</div>
                         <div class="section-row-subtitle">Oct 2015 - Present</div>
                     </div>
-                    <div class="section-row-content">As the sole developer to rebuild the company's core software from scratch, 
-                        my tasks includes architecture, UI/UX design, UI implentation, frontend implementation, backend implementation, 
-                        deployment, multi-tenant relational database design and scripting to transfer from old database to new database.
-                        The new student management system is faster, easier to use, more maintainable and better looking. The software
-                        is currently being used by 40 tenants and hundreds of users, who use the management features and report to
-                        navigate millions of records. 
+                    <div class="section-row-content">
+                        As the only developer, I built the company's core system from scratch, which went online after 9 months and currently generates more
+                        than $1,000,000 USD in yearly revenue. The system is a student management system used by more than 60 school districts to manage a total of
+                        600,000 students and 30,000,000 services. My roles in the company includes architecture, UI/UX design, UI implentation, frontend implementation,
+                        backend implementation, server, multi-tenant SQL administration.
                     </div>
                 </div>
 
                 <div class="section-row">
                     <div class="section-row-header">
-                        <div class="section-row-title">SupraMed: Full Stack Web Developer</div>
+                        <div class="section-row-title">SupraMed: Full Stack Developer</div>
                         <div class="section-row-subtitle">Jul 2014 - Oct 2015</div>
                     </div>
-                    <div class="section-row-content">Developed an enterprise-scale plastic surgeon EHR software system capable of managing an entire facility's process.
-                    My role as a full stack developer includes designing/developing UI, designing/developing functionality and managing database. Some features includes:
-                    advanced patient search, appointment scheduling calendar, cash register, insurance, price quote, electronic claims and photo/files management.
-                    </div>
-                </div>
-            
-                <div class="section-row">
-                    <div class="section-row-header">
-                        <div class="section-row-title">Humana: Software Engineer</div>
-                        <div class="section-row-subtitle">May 2013 - Jul 2014</div>
-                    </div>
-                    <div class="section-row-content">Developed a grand scale health-care management system for the government. Mainly responsible for backend development
-                        and some frontend development. Mentored a junior developer for 3 months (who later announced she was pregnant and left).
+                    <div class="section-row-content">
+                        Participated in a team of highly skills developers to help develop an enterprise-scale plastic surgeon EHR software system capable of managing an entire facility's process.
+                        My role as the only full stack developer in the team includes designing/developing UI and developing backend. Some features includes:
+                        advanced patient search, appointment scheduling calendar, cash register, insurance, price quote, electronic claims and photo/files management.
                     </div>
                 </div>
 
                 <div class="section-row">
                     <div class="section-row-header">
-                        <div class="section-row-title">JbabyUSA: Frontend Developer</div>
-                        <div class="section-row-subtitle">Startup Part Time: Jul 2013 - Sept 2013</div>
+                        <div class="section-row-title">Humana: Junior Software Engineer</div>
+                        <div class="section-row-subtitle">May 2013 - Jul 2014</div>
                     </div>
-                    <div class="section-row-content">Designed and developed the landing page and backend mailer for a baby onesie company started by a friend. (Sample: <a href="http://haitianhong.com/Main/JBabyUsa" style="text-decoration: none;">www.haitianhong.com/main/jbabyusa</a>)</div>
+                    <div class="section-row-content">
+                        Helped developed a grand scale health-care management system for the government. Mainly responsible for backend development
+                        and some frontend development. Later mentored an entry level developer for 3 months.
+                    </div>
                 </div>
 
                 @*<div class="section-row">
-                    <div class="section-row-header">
-                        <div class="section-row-title">NextHomeTech - Full Stack Developer</div>
-                        <div class="section-row-subtitle">Startup Part time: Sept 2012 - May 2014</div>
-                    </div>
-                    <div class="section-row-content">Developed NextHomeTech web and mobile applications. NextHomeTech is a startup technology company that produces and sells lightbulbs controlled by mobile devices. 
-                        (Temporary Site: <a href="Http://www.nexthometech.com/" style="text-decoration: none;">www.nexthometech.com</a> & <a href="Http://www.nexthometech.com/andyhong" style="text-decoration: none;">www.nexthometech.com/andyhong</a>)</div>
-                </div>*@
+                        <div class="section-row-header">
+                            <div class="section-row-title">JbabyUSA: Frontend Developer</div>
+                            <div class="section-row-subtitle">Startup Part Time: Jul 2013 - Sept 2013</div>
+                        </div>
+                        <div class="section-row-content">Designed and developed the landing page and backend mailer for a baby onesie company started by a friend. (Sample: <a href="http://haitianhong.com/Main/JBabyUsa" style="text-decoration: none;">www.haitianhong.com/main/jbabyusa</a>)</div>
+                    </div>*@
 
-                <div class="section-row">
-                    <div class="section-row-header">
-                        <div class="section-row-title">Commonwealth: IT Rep Tech Intern</div>
-                        <div class="section-row-subtitle">Jan 2011 - Apr 2011</div>
-                    </div>
-                    <div class="section-row-content">Customer technical phone support, encryption installation and building computers. Developed patience by learning to listen and deal with occassional whiners with bad attitudes on phone.</div>
-                </div>
+                @*<div class="section-row">
+                        <div class="section-row-header">
+                            <div class="section-row-title">NextHomeTech - Full Stack Developer</div>
+                            <div class="section-row-subtitle">Startup Part time: Sept 2012 - May 2014</div>
+                        </div>
+                        <div class="section-row-content">Developed NextHomeTech web and mobile applications. NextHomeTech is a startup technology company that produces and sells lightbulbs controlled by mobile devices.
+                            (Temporary Site: <a href="Http://www.nexthometech.com/" style="text-decoration: none;">www.nexthometech.com</a> & <a href="Http://www.nexthometech.com/andyhong" style="text-decoration: none;">www.nexthometech.com/andyhong</a>)</div>
+                    </div>*@
 
-                <div class="section-row">
+                @*<div class="section-row">
+                        <div class="section-row-header">
+                            <div class="section-row-title">Commonwealth: IT Rep Tech Intern</div>
+                            <div class="section-row-subtitle">Jan 2011 - Apr 2011</div>
+                        </div>
+                        <div class="section-row-content">Customer technical phone support, encryption installation and building computers. Developed patience by learning to listen and deal with occassional whiners with bad attitudes on phone.</div>
+                    </div>*@
+
+                @*<div class="section-row">
                     <div class="section-row-header">
-                        <div class="section-row-title">University of California San Diego: Tutor</div>
+                        <div class="section-row-title">University of California San Diego: Professor Assistant</div>
                         <div class="section-row-subtitle">March 2008 - June 2008</div>
                     </div>
-                    <div class="section-row-content">Tutor and supervise students of an intro Computer Science course. Responsible for helping lab students understand 
-                    object oriented programming concepts and debugging. Developed ability to communicate concepts in simplicity to troubled or disinterested students.</div>
-                </div>
+                    <div class="section-row-content">
+                        Tutor and supervise students of an intro Computer Science course. Responsible for helping lab students understand
+                        object oriented programming concepts and debugging. Developed ability to communicate concepts in simplicity to troubled or disinterested students.
+                    </div>
+                </div>*@
             </div>
         </div>
 
@@ -147,6 +180,7 @@
                 <div class="section-row">
                     <div class="section-row-header">
                         <div class="section-row-title">University of California, San Diego: Jacobs School of Engineering</div>
+                        <div class="section-row-subtitle">#15 ranked in U.S.A</div>
                     </div>
                     <div class="section-row-content">
                         Computer Science and Engineering, B.S
@@ -161,218 +195,22 @@
                 <div class="title">Personal</div>
             </div>
             <div class="section-content">
-                <div>- Native proficiency in Mandarin Chinese, Professional working proficiency in English, both in reading, writing and speaking.</div>
+                <div>- Mandarin Chinese: native proficiency in speaking, reading and writing.</div>
+                <div>- English: professional working proficiency in speaking, reading and writing.</div>
                 <div>- Professional filmer and video editor. Semi-professional photographer.</div>
                 <div>
-                    - I am an easy-going person. I don't complain. 
-                    I am a very meticulous and detail oriented person.
-                    I am good at multitasking (I am watching Two and Half Men as I'm writing this resume. But don't worry I won't do that at work). 
-                    I like to swim daily. I like the color blue. And I don't do drugs.
+                    - I am an easy-going person. I don't complain.
+                    I am very meticulous, detail oriented, yet fast paced engineer.
+                    I have a good sense for art and design which I apply to projects at work.
+                    I am good at multitasking (I am watching Two and Half Men as I'm writing this resume. But don't worry I won't do that at work).
+                    I suck at creative writing (as you can see here where each sentence begins with I).
+                    I like to exercise daily to keep my energy level consistent. Swimming is my favorite exercise activity. I like the color blue.
                 </div>
             </div>
         </div>
     </div>
 
     <div id="footer">
-        Developed by Haitian (Andy) Hong in HTML/CSS from scratch
+        Resume written by Haitian (Andy) Hong in HTML/CSS
     </div>
 </div>
-
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300' rel='stylesheet' type='text/css'>
-
-<style>
-    body {
-        background-color: black;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    #resume-container {
-        position: relative;
-        font-family: 'Open Sans Condensed', sans-serif;
-        background-color: whitesmoke;
-        width: 1000px; /* fits PDF width: approximate, PDF will shrink width to fit */
-        height: 1414px; /* fits PDF height: needs to be exact, may change based on margin */
-        margin: 0 auto;
-        box-sizing: border-box;
-        font-size: 19px;
-        color: rgb(60, 60, 60);
-    }
-
-        #resume-container #footer {
-            width: 100%;
-            position: absolute;
-            text-align: center;
-            bottom: 3px;
-            left: 0px;
-            font-size: 16px;
-            letter-spacing: 0px;
-        }
-
-        #resume-container #header {
-            position: relative;
-            overflow: auto;
-            padding: 10px 20px 10px 20px;
-            box-sizing: border-box;
-            background-color: rgb(65, 178, 205);
-            color: white;
-        }
-
-        #resume-container a {
-            color: inherit;
-        }
-
-            #resume-container #header .left-block {
-                width: 50%;
-                float: left;
-            }
-
-            #resume-container #header .right-block {
-                width: 50%;
-                float: right;
-                text-align: right;
-                padding-top: 10px;
-            }
-
-            #resume-container #header #name {
-                font-size: 50px;
-                font-weight: bolder;
-                line-height: 90%;
-            }
-
-            #resume-container #header #position {
-                padding-left: 2px;
-            }
-
-            #resume-container #header #email {
-                text-decoration: underline;
-            }
-
-        #resume-container .section {
-            margin: 8px 0px 8px 0px;
-            padding: 0px 10px 0px 10px;
-            box-sizing: border-box;
-        }
-
-        #resume-container #resume-container-content {
-            padding: 15px 40px 15px 40px;
-        }
-
-    .section .section-title {
-        border-bottom: 1px solid rgb(218, 218, 218);
-        padding-bottom: 5px;
-    }
-
-    .section .section-title .section-icon {
-        position: relative;
-        display: inline-block;
-        width: 23px;
-        height: 23px;
-        background-size: cover;
-        /*opacity: 0.7;*/
-        margin-right: 15px;
-        top: 0px;
-    }
-
-    .section .section-title .title {
-        display: inline-block;
-        font-size: 30px;
-        font-weight: 600;
-        color: rgb(90, 90, 90);
-    }
-
-    .section-row {
-        margin-bottom: 15px;
-        margin-top: 15px;
-    }
-
-        .section-row .section-row-header {
-            overflow: auto;
-        }
-
-    .section-row .section-row-title {
-        float: left;
-        font-weight: 600;
-        font-size: 20px;
-        color: rgb(90, 90, 90);
-    }
-
-        .section-row .section-row-subtitle {
-            float: right;
-            font-size: 20px;
-        }
-
-    .section-row .section-row-content {
-        line-height: 120%;
-        text-align: justify;
-    }
-
-        .section-icon.education {
-            background-image: url("/Content/Resume/school.png");
-        }
-
-        .section-icon.experience {
-            background-image: url("/Content/Resume/work.png");
-        }
-
-        .section-icon.other {
-            background-image: url("/Content/Resume/other.png");
-        }
-
-        .section-icon.skill {
-            background-image: url("/Content/Resume/skill.png");
-        }
-
-    .section .section-content {
-        padding: 10px 20px 10px 20px;
-    }
-
-    .skill-row {
-        overflow: auto;
-    }
-
-        .skill-row .skill-title {
-            float: left;
-            width: 400px;
-        }
-
-        .skill-row .skill-rating {
-            position: relative;
-            top: 12px;
-            float: left;
-            width: 300px;
-            height: 6px;
-            background-color: rgb(174, 225, 237);
-        }
-
-            .skill-row .skill-rating .skill-rating-percent {
-                background-color: rgb(65, 178, 205);
-                height: 100%;
-            }
-
-    .half {
-        width: 50%;
-    }
-
-    .float-left {
-        float: left;
-    }
-
-    .float-right {
-        float: right;
-    }
-
-    .clearfix {
-        clear: both;
-    }
-
-    .arrow {
-        position: absolute;
-        right: 270px;
-        top: 43px;
-        display: inline-block;
-        width: 32px;
-        height: 32px;
-    }
-</style>

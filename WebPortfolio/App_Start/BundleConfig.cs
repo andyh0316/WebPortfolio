@@ -28,6 +28,10 @@ namespace WebPortfolio
                 "~/Content/style.css"
                 ));
 
+            bundles.Add(new StyleBundle("~/Content/Resume/css").Include(
+                "~/Content/Resume/resume.css"
+                ));
+
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
                         "~/Content/themes/base/jquery.ui.resizable.css",

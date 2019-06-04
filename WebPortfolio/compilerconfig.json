@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Content/Resume/Resume.css",
+    "inputFile": "Content/Resume/Resume.scss"
+  },
+  {
+    "outputFile": "Content/MaterialIcons/material-icons.css",
+    "inputFile": "Content/MaterialIcons/material-icons.scss"
+  }
+]
